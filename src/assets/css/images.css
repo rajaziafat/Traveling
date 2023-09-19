@@ -1,0 +1,1015 @@
+@layer utilities {
+  .supplier-item {
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+    background: url("../imgs/landing/suppliers.png") no-repeat scroll 0 0;
+  }
+
+  .supplier-item.hertz {
+    background-position: -350px 0;
+  }
+
+  .supplier-item.enterprise {
+    background-position: -210px 0;
+  }
+
+  .supplier-item.europcar {
+    background-position: -280px 0;
+  }
+
+  .supplier-item.alamo {
+    background-position: 0 0;
+  }
+
+  .supplier-item.avis {
+    background-position: -70px 0;
+  }
+
+  .supplier-item.budget {
+    background-position: -140px 0;
+  }
+
+  .supplier-item.sixt {
+    background-position: -560px 0;
+  }
+
+  .social-box::after {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    margin-left: -53px;
+    width: 107px;
+    height: 28px;
+    content: "";
+    display: block;
+    background: url("../vectors/landing/review-sprite.svg") no-repeat 0 0;
+    background-size: 107px 111px;
+  }
+
+  .social-box.trustpilot::after {
+    background-position: 0 -84px;
+  }
+
+  .social-box.google::after {
+    margin-left: -41px;
+    margin-top: -14px;
+    width: 82px;
+    height: 28px;
+    background-size: 82px 85px;
+    background-position: 0 -37px;
+  }
+
+  .social-box.review-center::after {
+    background-position: 0 -21px;
+  }
+
+  .social-box.facebook::after {
+    margin-top: -10px;
+    height: 21px;
+    background-position: 0 0;
+  }
+
+  .flag {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: baseline;
+    margin: 0 8px 0 0;
+    text-decoration: inherit;
+    speak: none;
+    font-smooth: antialiased;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-image: url("../imgs/landing/flags-v3.png");
+    background-repeat: no-repeat;
+  }
+  div.flag.ad {
+    background-position: 0 0;
+  }
+
+  div.flag.ae {
+    background-position: -32px 0;
+  }
+
+  div.flag.af {
+    background-position: -64px 0;
+  }
+
+  div.flag.ag {
+    background-position: -96px 0;
+  }
+
+  div.flag.ai {
+    background-position: -128px 0;
+  }
+
+  div.flag.al {
+    background-position: -160px 0;
+  }
+
+  div.flag.am {
+    background-position: -192px 0;
+  }
+
+  div.flag.an {
+    background-position: -224px 0;
+  }
+
+  div.flag.ao {
+    background-position: -256px 0;
+  }
+
+  div.flag.ar {
+    background-position: -288px 0;
+  }
+
+  div.flag.as {
+    background-position: -320px 0;
+  }
+
+  div.flag.at {
+    background-position: -352px 0;
+  }
+
+  div.flag.au {
+    background-position: -384px 0;
+  }
+
+  div.flag.aw {
+    background-position: -416px 0;
+  }
+
+  div.flag.az {
+    background-position: -448px 0;
+  }
+
+  div.flag.ba {
+    background-position: -480px 0;
+  }
+
+  div.flag.bb {
+    background-position: -512px 0;
+  }
+
+  div.flag.bd {
+    background-position: -544px 0;
+  }
+
+  div.flag.be {
+    background-position: -576px 0;
+  }
+
+  div.flag.bf {
+    background-position: -608px 0;
+  }
+
+  div.flag.bg {
+    background-position: -640px 0;
+  }
+
+  div.flag.bh {
+    background-position: -672px 0;
+  }
+
+  div.flag.bi {
+    background-position: -704px 0;
+  }
+
+  div.flag.bj {
+    background-position: -736px 0;
+  }
+
+  div.flag.bm {
+    background-position: -768px 0;
+  }
+
+  div.flag.bn {
+    background-position: -800px 0;
+  }
+
+  div.flag.bo {
+    background-position: -832px 0;
+  }
+
+  div.flag.br {
+    background-position: -864px 0;
+  }
+
+  div.flag.bs {
+    background-position: -896px 0;
+  }
+
+  div.flag.bt {
+    background-position: -928px 0;
+  }
+
+  div.flag.bw {
+    background-position: -960px 0;
+  }
+
+  div.flag.by {
+    background-position: -992px 0;
+  }
+
+  div.flag.bz {
+    background-position: -1024px 0;
+  }
+
+  div.flag.ca {
+    background-position: -1056px 0;
+  }
+
+  div.flag.cd {
+    background-position: -1088px 0;
+  }
+
+  div.flag.cf {
+    background-position: -1120px 0;
+  }
+
+  div.flag.cg {
+    background-position: -1152px 0;
+  }
+
+  div.flag.ch {
+    background-position: -1184px 0;
+  }
+
+  div.flag.ci {
+    background-position: -1216px 0;
+  }
+
+  div.flag.ck {
+    background-position: -1248px 0;
+  }
+
+  div.flag.cl {
+    background-position: -1280px 0;
+  }
+
+  div.flag.cm {
+    background-position: -1312px 0;
+  }
+
+  div.flag.cn {
+    background-position: -1344px 0;
+  }
+
+  div.flag.co {
+    background-position: -1376px 0;
+  }
+
+  div.flag.cr {
+    background-position: -1408px 0;
+  }
+
+  div.flag.cu {
+    background-position: -1440px 0;
+  }
+
+  div.flag.cv {
+    background-position: -1472px 0;
+  }
+
+  div.flag.cy {
+    background-position: -1504px 0;
+  }
+
+  div.flag.cz {
+    background-position: -1536px 0;
+  }
+
+  div.flag.de {
+    background-position: -1568px 0;
+  }
+
+  div.flag.dj {
+    background-position: -1600px 0;
+  }
+
+  div.flag.dk {
+    background-position: -1632px 0;
+  }
+
+  div.flag.dm {
+    background-position: -1664px 0;
+  }
+
+  div.flag.do {
+    background-position: -1696px 0;
+  }
+
+  div.flag.dz {
+    background-position: -1728px 0;
+  }
+
+  div.flag.ec {
+    background-position: -1760px 0;
+  }
+
+  div.flag.ee {
+    background-position: -1792px 0;
+  }
+
+  div.flag.eg {
+    background-position: -1824px 0;
+  }
+
+  div.flag.eh {
+    background-position: -1856px 0;
+  }
+
+  div.flag.er {
+    background-position: -1888px 0;
+  }
+
+  div.flag.es {
+    background-position: -1920px 0;
+  }
+
+  div.flag.et {
+    background-position: -1952px 0;
+  }
+
+  div.flag.fi {
+    background-position: -1984px 0;
+  }
+
+  div.flag.fj {
+    background-position: -2016px 0;
+  }
+
+  div.flag.fk {
+    background-position: -2048px 0;
+  }
+
+  div.flag.fm {
+    background-position: -2080px 0;
+  }
+
+  div.flag.fo {
+    background-position: -2112px 0;
+  }
+
+  div.flag.fr,
+  div.flag.gf,
+  div.flag.mq {
+    background-position: -2144px 0;
+  }
+
+  div.flag.ga {
+    background-position: -2176px 0;
+  }
+
+  div.flag.gb {
+    background-position: -2208px 0;
+  }
+
+  div.flag.gd {
+    background-position: -2240px 0;
+  }
+
+  div.flag.ge {
+    background-position: -2272px 0;
+  }
+
+  div.flag.gg {
+    background-position: -2304px 0;
+  }
+
+  div.flag.gh {
+    background-position: -2336px 0;
+  }
+
+  div.flag.gi {
+    background-position: -2368px 0;
+  }
+
+  div.flag.gl {
+    background-position: -2400px 0;
+  }
+
+  div.flag.gm {
+    background-position: -2432px 0;
+  }
+
+  div.flag.gn {
+    background-position: -2464px 0;
+  }
+
+  div.flag.gq {
+    background-position: -2496px 0;
+  }
+
+  div.flag.gr {
+    background-position: -2528px 0;
+  }
+
+  div.flag.gt {
+    background-position: -2560px 0;
+  }
+
+  div.flag.gu {
+    background-position: -2592px 0;
+  }
+
+  div.flag.gw {
+    background-position: -2624px 0;
+  }
+
+  div.flag.gy {
+    background-position: -2656px 0;
+  }
+
+  div.flag.hk {
+    background-position: -2688px 0;
+  }
+
+  div.flag.hn {
+    background-position: -2720px 0;
+  }
+
+  div.flag.hr {
+    background-position: -2752px 0;
+  }
+
+  div.flag.ht {
+    background-position: -2784px 0;
+  }
+
+  div.flag.hu {
+    background-position: -2816px 0;
+  }
+
+  div.flag.id {
+    background-position: -2848px 0;
+  }
+
+  div.flag.ie {
+    background-position: -2880px 0;
+  }
+
+  div.flag.il {
+    background-position: -2912px 0;
+  }
+
+  div.flag.im {
+    background-position: -2944px 0;
+  }
+
+  div.flag.in {
+    background-position: -2976px 0;
+  }
+
+  div.flag.iq {
+    background-position: -3008px 0;
+  }
+
+  div.flag.ir {
+    background-position: -3040px 0;
+  }
+
+  div.flag.is {
+    background-position: -3072px 0;
+  }
+
+  div.flag.it {
+    background-position: -3104px 0;
+  }
+
+  div.flag.ja {
+    background-position: -3136px 0;
+  }
+
+  div.flag.je {
+    background-position: -3168px 0;
+  }
+
+  div.flag.jo {
+    background-position: -3200px 0;
+  }
+
+  div.flag.jp {
+    background-position: -3232px 0;
+  }
+
+  div.flag.ke {
+    background-position: -3264px 0;
+  }
+
+  div.flag.kg {
+    background-position: -3296px 0;
+  }
+
+  div.flag.kh {
+    background-position: -3328px 0;
+  }
+
+  div.flag.ki {
+    background-position: -3360px 0;
+  }
+
+  div.flag.km {
+    background-position: -3392px 0;
+  }
+
+  div.flag.kn {
+    background-position: -3424px 0;
+  }
+
+  div.flag.kp {
+    background-position: -3456px 0;
+  }
+
+  div.flag.kr {
+    background-position: -3488px 0;
+  }
+
+  div.flag.ks {
+    background-position: -3520px 0;
+  }
+
+  div.flag.kw {
+    background-position: -3552px 0;
+  }
+
+  div.flag.ky {
+    background-position: -3584px 0;
+  }
+
+  div.flag.kz {
+    background-position: -3616px 0;
+  }
+
+  div.flag.la {
+    background-position: -3648px 0;
+  }
+
+  div.flag.lb {
+    background-position: -3680px 0;
+  }
+
+  div.flag.lc {
+    background-position: -3712px 0;
+  }
+
+  div.flag.li {
+    background-position: -3744px 0;
+  }
+
+  div.flag.lk {
+    background-position: -3776px 0;
+  }
+
+  div.flag.lr {
+    background-position: -3808px 0;
+  }
+
+  div.flag.ls {
+    background-position: -3840px 0;
+  }
+
+  div.flag.lt {
+    background-position: -3872px 0;
+  }
+
+  div.flag.lu {
+    background-position: -3904px 0;
+  }
+
+  div.flag.lv {
+    background-position: -3936px 0;
+  }
+
+  div.flag.ly {
+    background-position: -3968px 0;
+  }
+
+  div.flag.ma {
+    background-position: -4000px 0;
+  }
+
+  div.flag.mc {
+    background-position: -4032px 0;
+  }
+
+  div.flag.md {
+    background-position: -4064px 0;
+  }
+
+  div.flag.me {
+    background-position: -4096px 0;
+  }
+
+  div.flag.mg {
+    background-position: -4128px 0;
+  }
+
+  div.flag.mh {
+    background-position: -4160px 0;
+  }
+
+  div.flag.mk {
+    background-position: -4192px 0;
+  }
+
+  div.flag.ml {
+    background-position: -4224px 0;
+  }
+
+  div.flag.mm {
+    background-position: -4256px 0;
+  }
+
+  div.flag.mo {
+    background-position: -4288px 0;
+  }
+
+  div.flag.mp {
+    background-position: -4320px 0;
+  }
+
+  div.flag.mr {
+    background-position: -4352px 0;
+  }
+
+  div.flag.ms {
+    background-position: -4384px 0;
+  }
+
+  div.flag.mt {
+    background-position: -4416px 0;
+  }
+
+  div.flag.mu {
+    background-position: -4448px 0;
+  }
+
+  div.flag.mv {
+    background-position: -4480px 0;
+  }
+
+  div.flag.mw {
+    background-position: -4512px 0;
+  }
+
+  div.flag.mx {
+    background-position: -4544px 0;
+  }
+
+  div.flag.my {
+    background-position: -4576px 0;
+  }
+
+  div.flag.mz {
+    background-position: -4608px 0;
+  }
+
+  div.flag.na {
+    background-position: -4640px 0;
+  }
+
+  div.flag.ne {
+    background-position: -4672px 0;
+  }
+
+  div.flag.ng {
+    background-position: -4704px 0;
+  }
+
+  div.flag.ni {
+    background-position: -4736px 0;
+  }
+
+  div.flag.nl {
+    background-position: -7136px 0;
+  }
+
+  div.flag.no {
+    background-position: -4768px 0;
+  }
+
+  div.flag.np {
+    background-position: -4800px 0;
+  }
+
+  div.flag.nr {
+    background-position: -4832px 0;
+  }
+
+  div.flag.nu {
+    background-position: -4864px 0;
+  }
+
+  div.flag.nz {
+    background-position: -4896px 0;
+  }
+
+  div.flag.om {
+    background-position: -4928px 0;
+  }
+
+  div.flag.pa {
+    background-position: -4960px 0;
+  }
+
+  div.flag.pe {
+    background-position: -4992px 0;
+  }
+
+  div.flag.pf {
+    background-position: -5024px 0;
+  }
+
+  div.flag.pg {
+    background-position: -5056px 0;
+  }
+
+  div.flag.ph {
+    background-position: -5088px 0;
+  }
+
+  div.flag.pk {
+    background-position: -5120px 0;
+  }
+
+  div.flag.pl {
+    background-position: -5152px 0;
+  }
+
+  div.flag.pm {
+    background-position: -5184px 0;
+  }
+
+  div.flag.pn {
+    background-position: -5216px 0;
+  }
+
+  div.flag.pr {
+    background-position: -5248px 0;
+  }
+
+  div.flag.ps {
+    background-position: -5280px 0;
+  }
+
+  div.flag.pt {
+    background-position: -5312px 0;
+  }
+
+  div.flag.pw {
+    background-position: -5344px 0;
+  }
+
+  div.flag.py {
+    background-position: -5376px 0;
+  }
+
+  div.flag.qa {
+    background-position: -5408px 0;
+  }
+
+  div.flag.ro {
+    background-position: -5440px 0;
+  }
+
+  div.flag.rs {
+    background-position: -5472px 0;
+  }
+
+  div.flag.ru {
+    background-position: -5504px 0;
+  }
+
+  div.flag.rw {
+    background-position: -5536px 0;
+  }
+
+  div.flag.sa {
+    background-position: -5568px 0;
+  }
+
+  div.flag.sb {
+    background-position: -5600px 0;
+  }
+
+  div.flag.sc {
+    background-position: -5632px 0;
+  }
+
+  div.flag.sd {
+    background-position: -5664px 0;
+  }
+
+  div.flag.se {
+    background-position: -5696px 0;
+  }
+
+  div.flag.sg {
+    background-position: -5728px 0;
+  }
+
+  div.flag.sh {
+    background-position: -5760px 0;
+  }
+
+  div.flag.si {
+    background-position: -5792px 0;
+  }
+
+  div.flag.sk {
+    background-position: -5824px 0;
+  }
+
+  div.flag.sl {
+    background-position: -5856px 0;
+  }
+
+  div.flag.sm {
+    background-position: -5888px 0;
+  }
+
+  div.flag.sn {
+    background-position: -5920px 0;
+  }
+
+  div.flag.so {
+    background-position: -5952px 0;
+  }
+
+  div.flag.sr {
+    background-position: -5984px 0;
+  }
+
+  div.flag.st {
+    background-position: -6016px 0;
+  }
+
+  div.flag.sv {
+    background-position: -6048px 0;
+  }
+
+  div.flag.sy {
+    background-position: -6080px 0;
+  }
+
+  div.flag.sz {
+    background-position: -6112px 0;
+  }
+
+  div.flag.tc {
+    background-position: -6144px 0;
+  }
+
+  div.flag.td {
+    background-position: -6176px 0;
+  }
+
+  div.flag.tg {
+    background-position: -6208px 0;
+  }
+
+  div.flag.th {
+    background-position: -6240px 0;
+  }
+
+  div.flag.tj {
+    background-position: -6272px 0;
+  }
+
+  div.flag.tl {
+    background-position: -6304px 0;
+  }
+
+  div.flag.tm {
+    background-position: -6336px 0;
+  }
+
+  div.flag.tn {
+    background-position: -6368px 0;
+  }
+
+  div.flag.to {
+    background-position: -6400px 0;
+  }
+
+  div.flag.tr {
+    background-position: -6432px 0;
+  }
+
+  div.flag.tt {
+    background-position: -6464px 0;
+  }
+
+  div.flag.tv {
+    background-position: -6496px 0;
+  }
+
+  div.flag.tw {
+    background-position: -6528px 0;
+  }
+
+  div.flag.tz {
+    background-position: -6560px 0;
+  }
+
+  div.flag.ua {
+    background-position: -6592px 0;
+  }
+
+  div.flag.ug {
+    background-position: -6624px 0;
+  }
+
+  div.flag.us {
+    background-position: -6656px 0;
+  }
+
+  div.flag.uy {
+    background-position: -6688px 0;
+  }
+
+  div.flag.uz {
+    background-position: -6720px 0;
+  }
+
+  div.flag.va {
+    background-position: -6752px 0;
+  }
+
+  div.flag.vc {
+    background-position: -6784px 0;
+  }
+
+  div.flag.ve {
+    background-position: -6816px 0;
+  }
+
+  div.flag.vg {
+    background-position: -6848px 0;
+  }
+
+  div.flag.vi {
+    background-position: -6880px 0;
+  }
+
+  div.flag.vn {
+    background-position: -6912px 0;
+  }
+
+  div.flag.vu {
+    background-position: -6944px 0;
+  }
+
+  div.flag.ws {
+    background-position: -6976px 0;
+  }
+
+  div.flag.ye {
+    background-position: -7008px 0;
+  }
+
+  div.flag.za {
+    background-position: -7040px 0;
+  }
+
+  div.flag.zm {
+    background-position: -7072px 0;
+  }
+
+  div.flag.zw {
+    background-position: -7104px 0;
+  }
+
+  .payments-type {
+    float: left;
+    margin: 0 4px 0 0;
+    width: 44px;
+    height: 28px;
+    background: transparent url("../vectors/common/payment-types-new.svg")
+      no-repeat scroll 0 0;
+    background-size: 44px 140px;
+  }
+
+  .payments-type.visa {
+    background-position: 0 -112px;
+  }
+
+  .payments-type.mastercard {
+    background-position: 0 -56px;
+  }
+
+  .payments-type.maestro {
+    background-position: 0 -28px;
+  }
+
+  .payments-type.amex {
+    /* background-position: 0 -px; */
+  }
+
+  .payments-type.paypal {
+    background-position: 0 -84px;
+  }
+}

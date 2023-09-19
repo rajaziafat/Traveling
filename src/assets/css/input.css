@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@layer base {
+  body {
+    @apply text-grey-2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  p {
+    @apply text-grey-3;
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    @apply px-5;
+  }
+
+  .contain {
+    @apply max-w-[1128px] mx-auto;
+  }
+
+  .display-small {
+    @apply font-bold text-4xl;
+  }
+
+  .button {
+    @apply py-[10px] px-4 text-base bg-clr-2 inline-block font-normal text-center text-white select-none border-[1px] border-solid border-transparent shadow-md rounded transition-all;
+  }
+
+  .button:hover {
+    @apply bg-clr-6;
+  }
+
+  .button.lg {
+    @apply py-[10px] px-5 text-xl;
+  }
+
+  .button.green {
+    @apply bg-clr-4;
+  }
+
+  .button.green:hover {
+    @apply bg-clr-5;
+  }
+
+  .slick-prev,.slick-next {
+    @apply  w-10 h-10;
+  }
+
+  .slick-prev::before,.slick-next::before {
+    @apply shadow-lg rounded-[50%] bg-gray-200 block w-10 h-10 flex justify-center items-center;
+  }
+}
