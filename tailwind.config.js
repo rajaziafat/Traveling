@@ -23,8 +23,8 @@ module.exports = {
         sans: ["Roboto"],
       },
       backgroundImage: {
-        landingHero: "url(../../src/assets/imgs/landing/bg.jpg)",
-        landingVideo: "url(../../src/assets/imgs/landing/watch-video.png)",
+        landingHero: "url(../imgs/landing/bg.jpg)",
+        landingVideo: "url(../imgs/landing/watch-video.png)",
       },
     },
   },
