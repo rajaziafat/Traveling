@@ -134,27 +134,49 @@ $(function () {
     $("td.yes-protect").removeClass("bg-grey-1");
   });
 
-  const handleShowLocs = function(e) {
-    
-    if($(e.target).val().length > 1) {
-      $('#locs-list').removeClass("hidden")
-      $('#locs-list').addClass("block")
+  const handleShowLocs = function (e) {
+    if ($(e.target).val().length > 1) {
+      $("#locs-list").removeClass("hidden");
+      $("#locs-list").addClass("block");
     } else {
-      $('#locs-list').addClass("hidden")
-      $('#locs-list').removeClass("block")
+      $("#locs-list").addClass("hidden");
+      $("#locs-list").removeClass("block");
     }
-  }
+  };
 
   $("#location-picker-input").click(handleShowLocs);
-  $("#location-picker-input").on('change textInput input', handleShowLocs);
-  $("#location-picker-input").on('blur', () => {
+  $("#location-picker-input").on("change textInput input", handleShowLocs);
+  $("#location-picker-input").on("blur", () => {
     setTimeout(() => {
-      $('#locs-list').addClass("hidden")
-      $('#locs-list').removeClass("block")
-    }, 300)
+      $("#locs-list").addClass("hidden");
+      $("#locs-list").removeClass("block");
+    }, 300);
   });
 
-  $("#locs-list > div").click(function() {
-    $("#location-picker-input").val(($(this).attr('data-name')))
-  })
+  $("#locs-list > div").click(function () {
+    $("#location-picker-input").val($(this).attr("data-name"));
+  });
+
+  const handleShowLocs2 = function (e) {
+    if ($(e.target).val().length > 1) {
+      $("#locs-list-2").removeClass("hidden");
+      $("#locs-list-2").addClass("block");
+    } else {
+      $("#locs-list-2").addClass("hidden");
+      $("#locs-list-2").removeClass("block");
+    }
+  };
+
+  $("#location-picker-input-2").click(handleShowLocs2);
+  $("#location-picker-input-2").on("change textInput input", handleShowLocs2);
+  $("#location-picker-input-2").on("blur", () => {
+    setTimeout(() => {
+      $("#locs-list-2").addClass("hidden");
+      $("#locs-list-2").removeClass("block");
+    }, 300);
+  });
+
+  $("#locs-list-2 > div").click(function () {
+    $("#location-picker-input-2").val($(this).attr("data-name"));
+  });
 });

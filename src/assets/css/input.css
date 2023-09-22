@@ -91,6 +91,24 @@
   z-index: 51 !important;
 }
 
+@media screen and (max-width: 1534px) {
+  #ui-datepicker-div {
+    /* display: flex !important; */
+    flex-direction: column;
+    width: 265px !important;
+  }
+
+  .ui-datepicker-row-break,
+  .ui-datepicker-buttonpane,
+  .ui-datepicker-year {
+    display: none !important;
+  }
+
+  .ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 100% !important;
+  }
+}
+
 .ui-helper-hidden {
   display: none;
 }
