@@ -25,7 +25,7 @@
 
 @layer utilities {
   .wrapper {
-    @apply px-5;
+    @apply px-5 sm:px-6;
   }
 
   .contain {
@@ -33,7 +33,7 @@
   }
 
   .display-small {
-    @apply font-bold text-4xl;
+    @apply font-bold text-2xl sm:text-4xl;
   }
 
   .button {
@@ -56,11 +56,21 @@
     @apply bg-clr-5;
   }
 
-  .slick-prev,.slick-next {
-    @apply  w-10 h-10;
+  .slick-prev,
+  .slick-next {
+    @apply w-10 h-10;
   }
 
-  .slick-prev::before,.slick-next::before {
+  .slick-prev::before,
+  .slick-next::before {
     @apply shadow-lg rounded-[50%] bg-gray-200 block w-10 h-10 flex justify-center items-center;
+  }
+
+  .accordion-head {
+    @apply py-[14px] relative pl-[30px] text-clr-1 before:absolute before:top-[calc(50%-4px)] before:-translate-y-1/2 before:left-0 before:inline-block before:w-3 before:h-3 before:content-dropdownIcon cursor-pointer;
+  }
+
+  .ui-datepicker {
+    @apply z-[51];
   }
 }

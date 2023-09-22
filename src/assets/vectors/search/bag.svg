@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 275.2 275.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        mask: url(#mask);
+      }
+
+      .cls-2 {
+        fill: #9c9c9c;
+        fill-rule: evenodd;
+      }
+    </style>
+    <mask id="mask" x="0" y="-3259.38" width="275.2" height="3534.59" maskUnits="userSpaceOnUse"/>
+  </defs>
+  <path fill='#9c9c9c' id="c" d="m15.82,237.96h15.82V69.4h-15.82C7.18,69.31.1,76.24,0,84.88c0,.09,0,.17,0,.26v137.09c0,8.69,7.05,15.74,15.82,15.74ZM154.63,69.4h-35.17c0-9.71,7.87-17.59,17.59-17.59s17.59,7.87,17.59,17.59ZM42.14,237.88h189.72V69.4h-68.46c0-14.56-11.8-26.36-26.36-26.36s-26.36,11.8-26.36,26.36H42.14v168.56-.09Zm231.94-15.74V85.14c0-8.69-7.14-15.82-15.82-15.82h-15.82v168.65h15.82c8.69,0,15.82-7.05,15.82-15.74v-.09Z"/>
+  <g class="cls-1">
+    <path fill='#9c9c9c' class="cls-2" d="m0,0h275.2v275.2H0V0Z"/>
+  </g>
+</svg>

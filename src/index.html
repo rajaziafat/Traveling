@@ -14,14 +14,22 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="./assets/css/images.css" />
     <link rel="stylesheet" href="./assets/css/slick.css" />
     <link rel="stylesheet" href="./assets/css/slick-theme.css" />
     <link rel="stylesheet" href="./assets/css/output.css" />
   </head>
   <body>
+    <div
+      id="overlay"
+      class="bg-[rgba(0,0,0,0.5)] fixed left-0 top-0 right-0 bottom-0 z-50 hidden md:hidden"
+    ></div>
     <header>
-      <nav class="bg-white shadow-md h-[60px] relative z-50">
+      <nav id="sidebar" class="bg-white shadow-md h-[60px] relative z-50">
         <div class="flex items-center justify-between h-full px-5">
           <a class="" href="#">
             <img
@@ -30,9 +38,24 @@
               alt="logo"
             />
           </a>
-          <ul class="flex h-full">
+          <img
+            id="hamburger"
+            class="md:hidden block"
+            src="./assets/vectors/common/burger.svg"
+            alt="burger"
+          />
+          <ul
+            id="menu"
+            class="md:static fixed top-0 -right-[320px] bg-white md:bg-transparent w-[320px] md:w-auto py-10 md:py-0 flex md:flex-row flex-col h-screen md:h-full transition-all"
+          >
+            <div
+              id="cross-menu"
+              class="block md:hidden absolute right-10 top-4 font-bold text-3xl"
+            >
+              &times;
+            </div>
             <li
-              class="h-full hover:bg-grey-1 px-5 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
             >
               EUR
               <img
@@ -42,7 +65,7 @@
               />
             </li>
             <li
-              class="h-full hover:bg-grey-1 px-5 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
             >
               English
               <img
@@ -52,17 +75,17 @@
               />
             </li>
             <li
-              class="h-full hover:bg-grey-1 px-5 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
             >
               Help
             </li>
             <li
-              class="h-full hover:bg-grey-1 px-5 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
             >
               Manage Booking
             </li>
             <li
-              class="h-full hover:bg-grey-1 pl-5 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2 group"
+              class="md:h-full hover:bg-grey-1 pl-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2 group"
             >
               <img
                 class="group-hover:hidden"
@@ -82,7 +105,7 @@
     </header>
 
     <main>
-      <section class="bg-landingHero py-6 px-5">
+      <section class="bg-landingHero bg-cover py-6 px-5">
         <h1 class="text-white mb-4 text-center display-small">
           Car Rental - Search, Compare, and Save up to 70%!
         </h1>
@@ -90,7 +113,9 @@
           ✓ No Hidden Costs ✓ 24/7 Support ✓ Free Cancellation
         </div>
 
-        <div class="w-[760px] mx-auto mt-5 p-5 rounded-md bg-clr-3 shadow">
+        <div
+          class="w-full max-w-[760px] mx-auto mt-5 p-5 rounded-md bg-clr-3 shadow"
+        >
           <div>
             <label class="text-sm mb-2 block" for="airport"
               >Pick-up location</label
@@ -130,7 +155,7 @@
             />
           </div>
 
-          <div class="grid grid-cols-2 gap-7 mt-4">
+          <div class="grid sm:grid-cols-2 gap-4 sm:gap-7 mt-4">
             <div>
               <label class="text-sm mb-2 block" for="airport"
                 >Pick-up date</label
@@ -154,27 +179,29 @@
                   class="block py-2 px-3 h-10"
                   type="text"
                   name="pickDate"
-                  id="pick-date-ui"
+                  id="pick-date-ui-2"
                 />
               </div>
             </div>
           </div>
 
-          <div class="flex justify-between items-center mt-5">
-            <div class="text-sm">
+          <div
+            class="flex flex-col sm:flex-row gap-3 justify-between items-center mt-5"
+          >
+            <div class="text-center sm:text-left text-sm">
               Driver's country of residence is <u>Pakistan</u> and age is
               <u>30-65</u>
             </div>
-            <button class="button lg green">Search now</button>
+            <a href="./search.html" class="button lg green">Search now</a>
           </div>
         </div>
       </section>
       <div
-        class="flex items-center justify-center gap-5 px-5 bg-clr-1 py-[10px]"
+        class="flex flex-wrap items-center justify-center gap-5 px-5 bg-clr-1 py-[10px]"
       >
         <div class="text-white">500+ Trusted Suppliers:</div>
 
-        <div class="flex gap-[10px]">
+        <div class="flex flex-wrap justify-center sm:justify-start gap-[10px]">
           <div class="supplier-item hertz"></div>
           <div class="supplier-item enterprise"></div>
           <div class="supplier-item europcar"></div>
@@ -187,7 +214,7 @@
 
       <section class="pt-10 wrapper">
         <div class="contain">
-          <h2 class="mb-6 text-3xl font-bold">
+          <h2 class="mb-6 text-xl sm:text-3xl font-bold">
             Highly recommended by our customers
           </h2>
 
@@ -214,15 +241,17 @@
 
       <section class="mt-[60px] wrapper">
         <div class="contain">
-          <div class="border border-solid rounded-lg border-[#d8d8d8] p-6">
-            <div class="flex gap-8 items-start">
+          <div
+            class="border border-solid rounded-lg border-[#d8d8d8] md:p-6 p-5"
+          >
+            <div class="flex flex-col sm:flex-row md:gap-8 gap-5 items-start">
               <div
-                class="h-20 w-20 rounded-[50%] bg-[#d9f1ff] flex justify-center items-center text-clr-2 text-4xl flex-shrink-0"
+                class="md:h-20 sm:h-16 h-10 md:w-20 sm:w-16 w-10 rounded-[50%] bg-[#d9f1ff] flex justify-center items-center text-clr-2 text-xl sm:text-4xl flex-shrink-0"
               >
                 $
               </div>
               <div>
-                <div class="text-2xl">
+                <div class="text-xl sm:text-2xl">
                   Find out where it's cheapest to rent a car
                 </div>
                 <p class="mt-4">
@@ -243,11 +272,11 @@
 
       <section class="pt-[60px] wrapper">
         <div class="contain">
-          <h2 class="mb-6 text-3xl font-bold">
+          <h2 class="mb-6 text-xl sm:text-3xl font-bold">
             We compare car rental prices, you save!
           </h2>
 
-          <div class="grid gap-6 grid-cols-3">
+          <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <div class="bg-[#f1f3f4] rounded-lg p-6">
               <h3 class="text-xl mb-4">
                 Find the perfect rental car for your trip
@@ -271,6 +300,7 @@
 
               <div class="flex gap-5 mb-3">
                 <svg
+                  class="flex-shrink-0 w-12 sm:w-auto"
                   class="flex-shrink-0"
                   width="60"
                   height="60"
@@ -292,6 +322,7 @@
 
               <div class="flex gap-5 mb-3">
                 <svg
+                  class="flex-shrink-0 w-12 sm:w-auto"
                   width="60"
                   height="60"
                   viewBox="0 0 60 60"
@@ -312,6 +343,7 @@
 
               <div class="flex gap-5 mb-3">
                 <svg
+                  class="flex-shrink-0 w-12 sm:w-auto"
                   width="60"
                   height="60"
                   viewBox="0 0 60 60"
@@ -332,6 +364,7 @@
 
               <div class="flex gap-5 mb-3">
                 <svg
+                  class="flex-shrink-0 w-12 sm:w-auto"
                   width="60"
                   height="60"
                   viewBox="0 0 60 60"
@@ -352,6 +385,7 @@
             </div>
             <div class="bg-[#fef6d6] rounded-lg p-6">
               <svg
+                class="w-16 sm:w-auto"
                 width="80"
                 height="80"
                 viewBox="0 0 80 80"
@@ -378,9 +412,9 @@
 
       <section class="py-[60px] wrapper">
         <div class="contain">
-          <div class="grid gap-6 grid-cols-12">
-            <div class="col-span-4">
-              <h2 class="text-3xl mb-6">Customer Recommended</h2>
+          <div class="grid gap-3 sm:gap-6 grid-cols-12">
+            <div class="lg:col-span-4 col-span-12">
+              <h2 class="text-xl sm:text-3xl mb-6">Customer Recommended</h2>
               <p>
                 We highly value
                 <a class="text-clr-2 hover:text-clr-1" href="#0"
@@ -390,28 +424,28 @@
                 better.
               </p>
             </div>
-            <div class="col-span-2">
+            <div class="col-span-6 md:col-span-3 lg:col-span-2">
               <div
                 class="border border-solid border-[#d8d8d8] p-4 rounded-lg h-[120px] relative social-box trustpilot text-center"
               >
                 <div class="text-[36px] text-clr-2">4.6</div>
               </div>
             </div>
-            <div class="col-span-2">
+            <div class="col-span-6 md:col-span-3 lg:col-span-2">
               <div
                 class="border border-solid border-[#d8d8d8] p-4 rounded-lg h-[120px] relative social-box google text-center"
               >
                 <div class="text-[36px] text-clr-2">4.4</div>
               </div>
             </div>
-            <div class="col-span-2">
+            <div class="col-span-6 md:col-span-3 lg:col-span-2">
               <div
                 class="border border-solid border-[#d8d8d8] p-4 rounded-lg h-[120px] relative social-box review-center text-center"
               >
                 <div class="text-[36px] text-clr-2">4.1</div>
               </div>
             </div>
-            <div class="col-span-2">
+            <div class="col-span-6 md:col-span-3 lg:col-span-2">
               <div
                 class="border border-solid border-[#d8d8d8] p-4 rounded-lg h-[120px] relative social-box facebook text-center"
               >
@@ -424,7 +458,7 @@
 
       <section class="py-[60px] wrapper">
         <div class="contain">
-          <h2 class="text-3xl mb-6">Awards</h2>
+          <h2 class="text-xl sm:text-3xl mb-6">Awards</h2>
 
           <div class="awards">
             <div class="px-3">
@@ -546,12 +580,14 @@
 
       <section class="py-[60px] wrapper bg-clr-2">
         <div class="contain">
-          <h2 class="text-3xl mb-6 text-white">Find your car in one of our</h2>
+          <h2 class="text-xl sm:text-3xl mb-6 text-white">
+            Find your car in one of our
+          </h2>
 
-          <div class="grid grid-cols-4 gap-5">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 lg:gap-5 gap-6">
             <div class="flex items-start gap-5">
               <svg
-                class="home-infograph-icon flex-shrink-0"
+                class="flex-shrink-0"
                 width="60"
                 height="60"
                 viewBox="0 0 60 60"
@@ -573,7 +609,7 @@
             </div>
             <div class="flex items-start gap-5">
               <svg
-                class="home-infograph-icon"
+                class=""
                 width="60"
                 height="60"
                 viewBox="0 0 60 60"
@@ -595,7 +631,7 @@
             </div>
             <div class="flex items-start gap-5">
               <svg
-                class="home-infograph-icon"
+                class=""
                 width="60"
                 height="60"
                 viewBox="0 0 60 60"
@@ -617,7 +653,7 @@
             </div>
             <div class="flex items-start gap-5">
               <svg
-                class="home-infograph-icon"
+                class=""
                 width="60"
                 height="60"
                 viewBox="0 0 60 60"
@@ -643,7 +679,7 @@
 
       <section class="py-[60px] wrapper">
         <div class="contain">
-          <h2 class="text-3xl text-white mb-1">
+          <h2 class="text-xl sm:text-3xl mb-1">
             How to find a great car rental deal
           </h2>
           <div>
@@ -651,7 +687,7 @@
             you can do to make sure you get the best deal:
           </div>
 
-          <div class="grid grid-cols-4 gap-5 mt-6">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
             <div>
               <div class="mb-6">
                 <img
@@ -733,15 +769,18 @@
       <section class="wrapper bg-[#ecf8ff] py-[60px]">
         <div class="contain">
           <div class="grid grid-cols-6 gap-6">
-            <div class="col-span-2">
-              <h2 class="text-3xl">What do you need to pick up the car?</h2>
+            <div class="lg:col-span-2 col-span-12">
+              <h2 class="text-xl sm:text-3xl">
+                What do you need to pick up the car?
+              </h2>
             </div>
-            <div class="col-span-4">
-              <div class="grid grid-cols-2 gap-6">
+            <div class="lg:col-span-4 col-span-12">
+              <div class="grid sm:grid-cols-2 gap-6">
                 <div class="">
                   <div class="flex gap-5">
                     <div class="flex-shrink-0">
                       <svg
+                        class="w-16 md:w-20 h-16 md:h-20 flex-shrink-0"
                         width="80"
                         height="80"
                         viewBox="0 0 80 80"
@@ -758,7 +797,7 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="text-xl mb-5">Driver's License</div>
+                      <div class="text-xl mb-2 md:mb-5">Driver's License</div>
                       <p class="text-sm">
                         A valid driver's license in the name of the main driver.
                         <a href="#0" class="text-clr-2"
@@ -772,6 +811,7 @@
                   <div class="flex gap-5">
                     <div class="flex-shrink-0">
                       <svg
+                        class="w-16 md:w-20 h-16 md:h-20 flex-shrink-0"
                         width="80"
                         height="80"
                         viewBox="0 0 80 80"
@@ -788,7 +828,7 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="text-xl mb-5">Credit Card</div>
+                      <div class="text-xl mb-2 md:mb-5">Credit Card</div>
                       <p class="text-sm">
                         A credit card in the name of the main driver with
                         sufficient funds.
@@ -803,6 +843,7 @@
                   <div class="flex gap-5">
                     <div class="flex-shrink-0">
                       <svg
+                        class="w-16 md:w-20 h-16 md:h-20 flex-shrink-0"
                         width="80"
                         height="80"
                         viewBox="0 0 80 80"
@@ -819,7 +860,7 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="text-xl mb-5">Identification</div>
+                      <div class="text-xl mb-2 md:mb-5">Identification</div>
                       <p class="text-sm">
                         A passport or other form of identification.
                         <a href="#0" class="text-clr-2"
@@ -833,6 +874,7 @@
                   <div class="flex gap-5">
                     <div class="flex-shrink-0">
                       <svg
+                        class="w-16 md:w-20 h-16 md:h-20 flex-shrink-0"
                         width="80"
                         height="80"
                         viewBox="0 0 80 80"
@@ -849,7 +891,7 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="text-xl mb-5">Voucher</div>
+                      <div class="text-xl mb-2 md:mb-5">Voucher</div>
                       <p class="text-sm">
                         A printed Voucher or an e-Voucher, where available.
                         <a href="#0" class="text-clr-2"
@@ -869,7 +911,3260 @@
         <div class="contain">
           <h2 class="text-3xl mb-6">Top Locations</h2>
           <div class="tl-container">
-            <!-- slow code -->
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 [&>*>*>a]:text-clr-2 [&>*>*>a]:text-sm"
+            >
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag al"></div>
+                <div>
+                  <a href="https://www.discovercars.com/albania">Albania</a>
+                  <div class="tl-offers text-xs">
+                    637 car rental offers in 7 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/albania/saranda"
+                      >Saranda</a
+                    >
+                    - 83 deals in 3 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/albania/tirana"
+                      >Tirana</a
+                    >
+                    - 414 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/albania/tirana/tia"
+                      >Tirana Airport</a
+                    >
+                    from € 16.90 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag au"></div>
+                <div>
+                  <a href="https://www.discovercars.com/australia">Australia</a>
+                  <div class="tl-offers text-xs">
+                    5288 car rental offers in 133 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/adelaide"
+                      >Adelaide</a
+                    >
+                    - 217 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/australia/adelaide/adl"
+                      >Adelaide Airport</a
+                    >
+                    from € 28.06 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/brisbane"
+                      >Brisbane</a
+                    >
+                    - 298 deals in 13 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/australia/brisbane/bne"
+                      >Brisbane Airport</a
+                    >
+                    from € 28.78 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/cairns"
+                      >Cairns</a
+                    >
+                    - 167 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/australia/cairns/cns"
+                      >Cairns Airport</a
+                    >
+                    from € 35.99 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/canberra"
+                      >Canberra</a
+                    >
+                    - 102 deals in 4 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/darwin"
+                      >Darwin</a
+                    >
+                    - 157 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/australia/darwin/drw"
+                      >Darwin Airport</a
+                    >
+                    from € 25.53 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/gold-coast"
+                      >Gold Coast</a
+                    >
+                    - 160 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/australia/gold-coast/ool"
+                      >Gold Coast Airport</a
+                    >
+                    from € 25.60 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/hobart"
+                      >Hobart</a
+                    >
+                    - 197 deals in 2 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/australia/hobart/downtown"
+                      >Downtown</a
+                    >
+                    from € 15.97 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/australia/hobart/hba"
+                      >Hobart Airport</a
+                    >
+                    from € 13.23 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/launceston"
+                      >Launceston</a
+                    >
+                    - 170 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/australia/launceston/lst"
+                      >Launceston Airport</a
+                    >
+                    from € 13.13 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/marcoola"
+                      >Marcoola</a
+                    >
+                    - 92 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/australia/marcoola/mcy"
+                      >Sunshine Coast Airport</a
+                    >
+                    from € 32.13 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/melbourne"
+                      >Melbourne</a
+                    >
+                    - 707 deals in 23 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/australia/melbourne/downtown"
+                      >Downtown</a
+                    >
+                    from € 26.01 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/australia/melbourne/mel"
+                      >Melbourne Airport</a
+                    >
+                    from € 24.51 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/perth"
+                      >Perth</a
+                    >
+                    - 250 deals in 14 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/australia/perth/downtown"
+                      >Downtown</a
+                    >
+                    from € 34.40 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/australia/perth/per"
+                      >Perth Airport</a
+                    >
+                    from € 32.69 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/australia/sydney"
+                      >Sydney</a
+                    >
+                    - 624 deals in 25 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/australia/sydney/syd"
+                      >Sydney Airport</a
+                    >
+                    from € 32.50 per day
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/australia/sydney/sydney-alexandria"
+                      >Sydney Alexandria</a
+                    >
+                    from € 25.43 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag at"></div>
+                <div>
+                  <a href="https://www.discovercars.com/austria">Austria</a>
+                  <div class="tl-offers text-xs">
+                    1175 car rental offers in 18 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/austria/vienna"
+                      >Vienna</a
+                    >
+                    - 504 deals in 6 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/austria/vienna/downtown"
+                      >Downtown</a
+                    >
+                    from € 22.52 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/austria/vienna/vie"
+                      >Vienna Airport</a
+                    >
+                    from € 22.58 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag pt"></div>
+                <div>
+                  <a href="https://www.discovercars.com/portugal-azores-islands"
+                    >Azores Islands</a
+                  >
+                  <div class="tl-offers text-xs">
+                    582 car rental offers in 9 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/horta"
+                      >Horta</a
+                    >
+                    - 80 deals in 3 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/pico"
+                      >Pico</a
+                    >
+                    - 44 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/pico/pix"
+                      >Pico Airport</a
+                    >
+                    from € 48.78 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/ponta-delgada"
+                      >Ponta Delgada</a
+                    >
+                    - 344 deals in 6 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/ponta-delgada/downtown"
+                      >Downtown</a
+                    >
+                    from € 36.18 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/ponta-delgada/pdl"
+                      >Ponta Delgada Airport</a
+                    >
+                    from € 25.80 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/praia-da-vitoria"
+                      >Praia da Vitoria</a
+                    >
+                    - 36 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/praia-da-vitoria/ter"
+                      >Lajes Terceira Airport</a
+                    >
+                    from € 34.51 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/santa-cruz-das-flores"
+                      >Santa Cruz das Flores</a
+                    >
+                    - 8 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/portugal-azores-islands/santa-cruz-das-flores/flw"
+                      >Santa Cruz das Flores Airport</a
+                    >
+                    from € 48.78 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag es"></div>
+                <div>
+                  <a href="https://www.discovercars.com/spain-balearic-islands"
+                    >Balearic Islands</a
+                  >
+                  <div class="tl-offers text-xs">
+                    2665 car rental offers in 4 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/spain-balearic-islands/ibiza"
+                      >Ibiza</a
+                    >
+                    - 538 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-balearic-islands/ibiza/ibz"
+                      >Ibiza Airport</a
+                    >
+                    from € 12.03 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/spain-balearic-islands/mallorca"
+                      >Mallorca</a
+                    >
+                    - 1116 deals in 22 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-balearic-islands/mallorca/pmi"
+                      >Palma de Mallorca Airport</a
+                    >
+                    from € 14.84 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/spain-balearic-islands/menorca"
+                      >Menorca</a
+                    >
+                    - 1013 deals in 15 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-balearic-islands/menorca/mah"
+                      >Menorca Airport</a
+                    >
+                    from € 5.96 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag br"></div>
+                <div>
+                  <a href="https://www.discovercars.com/brazil">Brazil</a>
+                  <div class="tl-offers text-xs">
+                    10425 car rental offers in 347 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/brazil/florianopolis"
+                      >Florianopolis</a
+                    >
+                    - 130 deals in 7 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/brazil/guarulhos"
+                      >Guarulhos</a
+                    >
+                    - 132 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/brazil/guarulhos/gru"
+                      >Guarulhos Airport</a
+                    >
+                    from € 12.89 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/brazil/rio-de-janeiro"
+                      >Rio de Janeiro</a
+                    >
+                    - 564 deals in 19 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/brazil/rio-de-janeiro/gig"
+                      >Rio de Janeiro Airport Galeao</a
+                    >
+                    from € 11.50 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag bg"></div>
+                <div>
+                  <a href="https://www.discovercars.com/bulgaria">Bulgaria</a>
+                  <div class="tl-offers text-xs">
+                    2279 car rental offers in 71 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/bulgaria/bourgas"
+                      >Burgas</a
+                    >
+                    - 318 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/bulgaria/bourgas/boj"
+                      >Burgas Airport</a
+                    >
+                    from € 11.88 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/bulgaria/sofia"
+                      >Sofia</a
+                    >
+                    - 677 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/bulgaria/sofia/sof"
+                      >Sofia Airport</a
+                    >
+                    from € 8.94 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/bulgaria/varna"
+                      >Varna</a
+                    >
+                    - 391 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/bulgaria/varna/var"
+                      >Varna Airport</a
+                    >
+                    from € 8.49 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag us"></div>
+                <div>
+                  <a href="https://www.discovercars.com/usa-california"
+                    >California</a
+                  >
+                  <div class="tl-offers text-xs">
+                    2043 car rental offers in 28 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/usa-california/los-angeles"
+                      >Los Angeles</a
+                    >
+                    - 249 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-california/los-angeles/lax"
+                      >Los Angeles Airport</a
+                    >
+                    from € 39.32 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/usa-california/san-francisco"
+                      >San Francisco</a
+                    >
+                    - 215 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-california/san-francisco/sfo"
+                      >San Francisco Airport</a
+                    >
+                    from € 45.30 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag ca"></div>
+                <div>
+                  <a href="https://www.discovercars.com/canada">Canada</a>
+                  <div class="tl-offers text-xs">
+                    1539 car rental offers in 103 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/canada/calgary"
+                      >Calgary</a
+                    >
+                    - 106 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/canada/calgary/yyc"
+                      >Calgary Airport</a
+                    >
+                    from € 62.06 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/canada/montreal"
+                      >Montreal</a
+                    >
+                    - 94 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/canada/montreal/yul"
+                      >Montreal Airport</a
+                    >
+                    from € 60.05 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/canada/toronto"
+                      >Toronto</a
+                    >
+                    - 226 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/canada/toronto/yyz"
+                      >Toronto Airport</a
+                    >
+                    from € 24.64 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/canada/vancouver"
+                      >Vancouver</a
+                    >
+                    - 99 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/canada/vancouver/yvr"
+                      >Vancouver Airport</a
+                    >
+                    from € 51.65 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag es"></div>
+                <div>
+                  <a href="https://www.discovercars.com/spain-canary-islands"
+                    >Canary Islands</a
+                  >
+                  <div class="tl-offers text-xs">
+                    4757 car rental offers in 9 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/fuerteventura"
+                      >Fuerteventura</a
+                    >
+                    - 501 deals in 8 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/fuerteventura/fue"
+                      >Fuerteventura Airport</a
+                    >
+                    from € 6.97 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/gran-canaria"
+                      >Gran Canaria</a
+                    >
+                    - 961 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/gran-canaria/lpa"
+                      >Gran Canaria Airport</a
+                    >
+                    from € 4.28 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/lanzarote"
+                      >Lanzarote</a
+                    >
+                    - 442 deals in 8 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/lanzarote/ace"
+                      >Lanzarote Airport</a
+                    >
+                    from € 7.44 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/tenerife"
+                      >Tenerife</a
+                    >
+                    - 2198 deals in 41 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/tenerife/tfs"
+                      >Tenerife Airport South</a
+                    >
+                    from € 5.17 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/spain-canary-islands/tenerife/tfn"
+                      >Tenerife North Airport</a
+                    >
+                    from € 7.74 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag us"></div>
+                <div>
+                  <a href="https://www.discovercars.com/usa-colorado"
+                    >Colorado</a
+                  >
+                  <div class="tl-offers text-xs">
+                    438 car rental offers in 8 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-colorado/denver"
+                      >Denver</a
+                    >
+                    - 152 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-colorado/denver/den"
+                      >Denver Airport</a
+                    >
+                    from € 47.16 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag cr"></div>
+                <div>
+                  <a href="https://www.discovercars.com/costa-rica"
+                    >Costa Rica</a
+                  >
+                  <div class="tl-offers text-xs">
+                    4392 car rental offers in 33 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/costa-rica/liberia"
+                      >Liberia</a
+                    >
+                    - 539 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/costa-rica/liberia/lir"
+                      >Liberia Airport</a
+                    >
+                    from € 19.06 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/costa-rica/san-jose"
+                      >San Jose</a
+                    >
+                    - 1136 deals in 12 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/costa-rica/san-jose/sjo"
+                      >Juan Santamaria International Airport (San José
+                      Airport)</a
+                    >
+                    from € 3.92 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag gr"></div>
+                <div>
+                  <a href="https://www.discovercars.com/greece-crete">Crete</a>
+                  <div class="tl-offers text-xs">
+                    2202 car rental offers in 26 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece-crete/chania"
+                      >Chania</a
+                    >
+                    - 633 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/greece-crete/chania/chq"
+                      >Chania Airport</a
+                    >
+                    from € 23.62 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/greece-crete/heraklion"
+                      >Heraklion</a
+                    >
+                    - 1061 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/greece-crete/heraklion/her"
+                      >Heraklion Airport</a
+                    >
+                    from € 18.40 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag hr"></div>
+                <div>
+                  <a href="https://www.discovercars.com/croatia">Croatia</a>
+                  <div class="tl-offers text-xs">
+                    4475 car rental offers in 25 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/croatia/dubrovnik"
+                      >Dubrovnik</a
+                    >
+                    - 1029 deals in 9 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/croatia/dubrovnik/dbv"
+                      >Dubrovnik Airport</a
+                    >
+                    from € 9.31 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/croatia/pula">Pula</a>
+                    - 372 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/croatia/pula/puy"
+                      >Pula Airport</a
+                    >
+                    from € 13.23 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/croatia/rijeka"
+                      >Rijeka</a
+                    >
+                    - 360 deals in 3 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/croatia/split"
+                      >Split</a
+                    >
+                    - 962 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/croatia/split/spu"
+                      >Split Airport</a
+                    >
+                    from € 13.49 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/croatia/zadar"
+                      >Zadar</a
+                    >
+                    - 446 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/croatia/zadar/zad"
+                      >Zadar Airport</a
+                    >
+                    from € 16.15 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/croatia/zagreb"
+                      >Zagreb</a
+                    >
+                    - 793 deals in 9 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/croatia/zagreb/zag"
+                      >Zagreb Airport</a
+                    >
+                    from € 11.96 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag cy"></div>
+                <div>
+                  <a href="https://www.discovercars.com/cyprus">Cyprus</a>
+                  <div class="tl-offers text-xs">
+                    2046 car rental offers in 10 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/cyprus/larnaca"
+                      >Larnaca</a
+                    >
+                    - 618 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/cyprus/larnaca/lca"
+                      >Larnaca Airport</a
+                    >
+                    from € 24.62 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/cyprus/paphos"
+                      >Paphos</a
+                    >
+                    - 615 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/cyprus/paphos/pfo"
+                      >Paphos Airport</a
+                    >
+                    from € 24.62 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag cz"></div>
+                <div>
+                  <a href="https://www.discovercars.com/czech-republic"
+                    >Czech Republic</a
+                  >
+                  <div class="tl-offers text-xs">
+                    837 car rental offers in 8 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/czech-republic/prague"
+                      >Prague</a
+                    >
+                    - 634 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/czech-republic/prague/prg"
+                      >Prague Airport</a
+                    >
+                    from € 14.81 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag us"></div>
+                <div>
+                  <a href="https://www.discovercars.com/usa-florida">Florida</a>
+                  <div class="tl-offers text-xs">
+                    3866 car rental offers in 32 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/usa-florida/fort-lauderdale"
+                      >Fort Lauderdale</a
+                    >
+                    - 419 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-florida/fort-lauderdale/fll"
+                      >Fort Lauderdale Airport</a
+                    >
+                    from € 12.86 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/usa-florida/fort-myers"
+                      >Fort Myers</a
+                    >
+                    - 174 deals in 1 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-florida/miami"
+                      >Miami</a
+                    >
+                    - 650 deals in 9 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/usa-florida/miami/mia"
+                      >Miami Airport</a
+                    >
+                    from € 6.72 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-florida/orlando"
+                      >Orlando</a
+                    >
+                    - 529 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-florida/orlando/mco"
+                      >Orlando Airport</a
+                    >
+                    from € 15.32 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-florida/tampa"
+                      >Tampa</a
+                    >
+                    - 356 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/usa-florida/tampa/tpa"
+                      >Tampa Airport</a
+                    >
+                    from € 16.05 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/usa-florida/west-palm-beach"
+                      >West Palm Beach</a
+                    >
+                    - 176 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-florida/west-palm-beach/pbi"
+                      >West Palm Beach Airport</a
+                    >
+                    from € 30.70 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag fr"></div>
+                <div>
+                  <a href="https://www.discovercars.com/france">France</a>
+                  <div class="tl-offers text-xs">
+                    11719 car rental offers in 298 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/france/bordeaux"
+                      >Bordeaux</a
+                    >
+                    - 307 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/france/bordeaux/bod"
+                      >Bordeaux Airport</a
+                    >
+                    from € 41.12 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/france/carcassonne"
+                      >Carcassonne</a
+                    >
+                    - 93 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/france/carcassonne/ccf"
+                      >Carcassonne Airport</a
+                    >
+                    from € 45.06 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/france/ferney-voltaire"
+                      >Ferney-Voltaire</a
+                    >
+                    - 139 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/france/ferney-voltaire/gva"
+                      >Geneva Airport French sector</a
+                    >
+                    from € 46.59 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/france/lyon">Lyon</a>
+                    - 359 deals in 12 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/france/lyon/lys"
+                      >Lyon St Exupéry Airport</a
+                    >
+                    from € 29.48 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/france/marseille"
+                      >Marseille</a
+                    >
+                    - 275 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/france/marseille/mrs"
+                      >Marseille Airport</a
+                    >
+                    from € 84.18 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/france/nice">Nice</a>
+                    - 373 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/france/nice/nce"
+                      >Nice Airport</a
+                    >
+                    from € 38.05 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/france/paris"
+                      >Paris</a
+                    >
+                    - 1550 deals in 45 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/france/paris/cdg"
+                      >Paris Charles de Gaulle Airport</a
+                    >
+                    from € 32.00 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/france/toulouse"
+                      >Toulouse</a
+                    >
+                    - 305 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/france/toulouse/tls"
+                      >Toulouse Blagnac Airport</a
+                    >
+                    from € 59.41 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag de"></div>
+                <div>
+                  <a href="https://www.discovercars.com/germany">Germany</a>
+                  <div class="tl-offers text-xs">
+                    32673 car rental offers in 370 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/germany/berlin"
+                      >Berlin</a
+                    >
+                    - 1560 deals in 35 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/germany/cologne"
+                      >Cologne</a
+                    >
+                    - 972 deals in 15 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/germany/cologne/cgn"
+                      >Cologne Bonn Airport</a
+                    >
+                    from € 19.19 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/germany/dusseldorf"
+                      >Dusseldorf</a
+                    >
+                    - 646 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/germany/dusseldorf/dus"
+                      >Dusseldorf Airport</a
+                    >
+                    from € 33.23 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/germany/frankfurt"
+                      >Frankfurt</a
+                    >
+                    - 838 deals in 10 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/germany/frankfurt/fra"
+                      >Frankfurt Airport</a
+                    >
+                    from € 24.33 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/germany/hamburg"
+                      >Hamburg</a
+                    >
+                    - 1241 deals in 17 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/germany/hamburg/ham"
+                      >Hamburg Airport</a
+                    >
+                    from € 15.71 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/germany/munich"
+                      >Munich</a
+                    >
+                    - 1077 deals in 17 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/germany/munich/muc"
+                      >Munich Airport</a
+                    >
+                    from € 21.49 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag gr"></div>
+                <div>
+                  <a href="https://www.discovercars.com/greece">Greece</a>
+                  <div class="tl-offers text-xs">
+                    14151 car rental offers in 83 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/athens"
+                      >Athens</a
+                    >
+                    - 2089 deals in 20 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/athens/ath"
+                      >Athens Airport</a
+                    >
+                    from € 11.47 per day
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/greece/athens/downtown"
+                      >Downtown</a
+                    >
+                    from € 12.10 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/corfu"
+                      >Corfu</a
+                    >
+                    - 1018 deals in 11 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/corfu/cfu"
+                      >Corfu Airport</a
+                    >
+                    from € 19.93 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/kalamata"
+                      >Kalamata</a
+                    >
+                    - 381 deals in 6 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/kefalonia"
+                      >Kefalonia</a
+                    >
+                    - 505 deals in 12 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/kefalonia/efl"
+                      >Kefalonia Airport</a
+                    >
+                    from € 11.59 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/kos">Kos</a> -
+                    351 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/kos/kgs"
+                      >Kos Airport</a
+                    >
+                    from € 18.60 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/milos"
+                      >Milos</a
+                    >
+                    - 293 deals in 6 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/mykonos"
+                      >Mykonos</a
+                    >
+                    - 380 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/mykonos/jmk"
+                      >Mykonos Airport</a
+                    >
+                    from € 16.90 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/naxos"
+                      >Naxos</a
+                    >
+                    - 310 deals in 6 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/paros"
+                      >Paros</a
+                    >
+                    - 580 deals in 4 locations
+                  </div>
+                  <div class="tl-item port">
+                    <a
+                      href="https://www.discovercars.com/greece/paros/paros-port"
+                      >Paros Port</a
+                    >
+                    from € 17.81 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/preveza"
+                      >Preveza</a
+                    >
+                    - 277 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/preveza/pvk"
+                      >Preveza Airport</a
+                    >
+                    from € 19.34 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/rhodes"
+                      >Rhodes</a
+                    >
+                    - 1047 deals in 13 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/rhodes/rho"
+                      >Rhodes Airport</a
+                    >
+                    from € 18.04 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/santorini"
+                      >Santorini</a
+                    >
+                    - 431 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/santorini/jtr"
+                      >Santorini Airport</a
+                    >
+                    from € 15.50 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/thessaloniki"
+                      >Thessaloniki</a
+                    >
+                    - 855 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/greece/thessaloniki/skg"
+                      >Thessaloniki Airport</a
+                    >
+                    from € 17.03 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/greece/zakynthos"
+                      >Zakynthos</a
+                    >
+                    - 541 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/greece/zakynthos/zth"
+                      >Zakynthos Airport</a
+                    >
+                    from € 19.60 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag us"></div>
+                <div>
+                  <a href="https://www.discovercars.com/usa-hawaii">Hawaii</a>
+                  <div class="tl-offers text-xs">
+                    585 car rental offers in 11 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-hawaii/honolulu"
+                      >Honolulu</a
+                    >
+                    - 121 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-hawaii/honolulu/hnl"
+                      >Honolulu Airport</a
+                    >
+                    from € 47.82 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-hawaii/kahului"
+                      >Kahului</a
+                    >
+                    - 123 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-hawaii/kahului/ogg"
+                      >Kahului Airport OGG</a
+                    >
+                    from € 45.30 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-hawaii/lihue"
+                      >Lihue</a
+                    >
+                    - 76 deals in 1 locations
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag hu"></div>
+                <div>
+                  <a href="https://www.discovercars.com/hungary">Hungary</a>
+                  <div class="tl-offers text-xs">
+                    459 car rental offers in 12 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/hungary/budapest"
+                      >Budapest</a
+                    >
+                    - 351 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/hungary/budapest/bud"
+                      >Budapest Airport</a
+                    >
+                    from € 9.78 per day
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/hungary/budapest/downtown"
+                      >Downtown</a
+                    >
+                    from € 15.04 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag is"></div>
+                <div>
+                  <a href="https://www.discovercars.com/iceland">Iceland</a>
+                  <div class="tl-offers text-xs">
+                    1180 car rental offers in 13 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/iceland/keflavik"
+                      >Keflavik</a
+                    >
+                    - 665 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/iceland/keflavik/kef"
+                      >Keflavik Airport</a
+                    >
+                    from € 31.72 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/iceland/reykjavik"
+                      >Reykjavik</a
+                    >
+                    - 283 deals in 3 locations
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag ie"></div>
+                <div>
+                  <a href="https://www.discovercars.com/ireland">Ireland</a>
+                  <div class="tl-offers text-xs">
+                    1085 car rental offers in 22 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/ireland/cork">Cork</a>
+                    - 220 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/ireland/cork/ork"
+                      >Cork Airport</a
+                    >
+                    from € 20.02 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/ireland/dublin"
+                      >Dublin</a
+                    >
+                    - 380 deals in 8 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/ireland/dublin/dub"
+                      >Dublin Airport</a
+                    >
+                    from € 24.64 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/ireland/knock"
+                      >Knock</a
+                    >
+                    - 39 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/ireland/knock/noc"
+                      >Knock Airport</a
+                    >
+                    from € 28.97 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/ireland/shannon"
+                      >Shannon</a
+                    >
+                    - 124 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/ireland/shannon/snn"
+                      >Shannon Airport</a
+                    >
+                    from € 25.55 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag it"></div>
+                <div>
+                  <a href="https://www.discovercars.com/italy-mainland"
+                    >Italy</a
+                  >
+                  <div class="tl-offers text-xs">
+                    19695 car rental offers in 252 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/ancona"
+                      >Ancona</a
+                    >
+                    - 155 deals in 3 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/bari"
+                      >Bari</a
+                    >
+                    - 415 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/bari/bri"
+                      >Bari Airport</a
+                    >
+                    from € 16.01 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/bergamo"
+                      >Bergamo</a
+                    >
+                    - 494 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/bergamo/bgy"
+                      >Bergamo Airport</a
+                    >
+                    from € 8.84 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/bologna"
+                      >Bologna</a
+                    >
+                    - 606 deals in 9 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/bologna/blq"
+                      >Bologna Airport</a
+                    >
+                    from € 11.68 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/brindisi"
+                      >Brindisi</a
+                    >
+                    - 339 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/brindisi/bds"
+                      >Brindisi Airport</a
+                    >
+                    from € 15.20 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/florence"
+                      >Florence</a
+                    >
+                    - 667 deals in 8 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/florence/downtown"
+                      >Downtown</a
+                    >
+                    from € 35.56 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/florence/flr"
+                      >Florence Airport</a
+                    >
+                    from € 43.36 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/genova"
+                      >Genoa</a
+                    >
+                    - 365 deals in 4 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/lamezia-terme"
+                      >Lamezia Terme</a
+                    >
+                    - 381 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/lamezia-terme/suf"
+                      >Lamezia Terme Airport</a
+                    >
+                    from € 19.26 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/milan"
+                      >Milan</a
+                    >
+                    - 1871 deals in 39 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/milan/mxp"
+                      >Milan Airport Malpensa</a
+                    >
+                    from € 9.28 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/milan/lin"
+                      >Milan Linate Airport</a
+                    >
+                    from € 9.31 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/naples"
+                      >Naples</a
+                    >
+                    - 792 deals in 10 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/naples/nap"
+                      >Naples Airport</a
+                    >
+                    from € 11.05 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/perugia"
+                      >Perugia</a
+                    >
+                    - 191 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/perugia/peg"
+                      >Perugia Airport</a
+                    >
+                    from € 45.62 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/pescara"
+                      >Pescara</a
+                    >
+                    - 364 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/pescara/psr"
+                      >Pescara Airport</a
+                    >
+                    from € 19.78 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/pisa"
+                      >Pisa</a
+                    >
+                    - 431 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/pisa/psa"
+                      >Pisa Airport</a
+                    >
+                    from € 12.36 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/rome"
+                      >Rome</a
+                    >
+                    - 2741 deals in 38 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/rome/cia"
+                      >Rome Airport Ciampino</a
+                    >
+                    from € 15.17 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/rome/fco"
+                      >Rome Airport Fiumicino</a
+                    >
+                    from € 9.90 per day
+                  </div>
+                  <div class="tl-item railway">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/rome/rome-termini-railway-station"
+                      >Rome Termini Train Station</a
+                    >
+                    from € 25.80 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/treviso"
+                      >Treviso</a
+                    >
+                    - 212 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/treviso/tsf"
+                      >Treviso Airport</a
+                    >
+                    from € 19.50 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/trieste"
+                      >Trieste</a
+                    >
+                    - 195 deals in 3 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/turin"
+                      >Turin</a
+                    >
+                    - 744 deals in 11 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/turin/trn"
+                      >Turin Airport</a
+                    >
+                    from € 13.75 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/venice"
+                      >Venice</a
+                    >
+                    - 446 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/venice/vce"
+                      >Venice Airport</a
+                    >
+                    from € 12.05 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-mainland/verona"
+                      >Verona</a
+                    >
+                    - 656 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-mainland/verona/vrn"
+                      >Verona Airport</a
+                    >
+                    from € 15.34 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag jo"></div>
+                <div>
+                  <a href="https://www.discovercars.com/jordan">Jordan</a>
+                  <div class="tl-offers text-xs">
+                    1769 car rental offers in 5 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/jordan/amman"
+                      >Amman</a
+                    >
+                    - 1386 deals in 17 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/jordan/amman/amm"
+                      >Amman International Airport Queen Alia</a
+                    >
+                    from € 15.54 per day
+                  </div>
+                  <div class="tl-item downtown">
+                    <a href="https://www.discovercars.com/jordan/amman/downtown"
+                      >Downtown</a
+                    >
+                    from € 17.20 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/jordan/aqaba"
+                      >Aqaba</a
+                    >
+                    - 255 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/jordan/aqaba/aqj"
+                      >Aqaba Airport</a
+                    >
+                    from € 19.78 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag mt"></div>
+                <div>
+                  <a href="https://www.discovercars.com/malta">Malta</a>
+                  <div class="tl-offers text-xs">
+                    1113 car rental offers in 9 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/malta/luqa">Luqa</a> -
+                    574 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/malta/luqa/mla"
+                      >Malta Airport</a
+                    >
+                    from € 6.65 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag mu"></div>
+                <div>
+                  <a href="https://www.discovercars.com/mauritius">Mauritius</a>
+                  <div class="tl-offers text-xs">
+                    1000 car rental offers in 24 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/mauritius/plaisance"
+                      >Plaisance</a
+                    >
+                    - 249 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/mauritius/plaisance/mru"
+                      >Mauritius Airport</a
+                    >
+                    from € 22.58 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag mx"></div>
+                <div>
+                  <a href="https://www.discovercars.com/mexico">Mexico</a>
+                  <div class="tl-offers text-xs">
+                    10770 car rental offers in 69 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/mexico/cancun"
+                      >Cancun</a
+                    >
+                    - 725 deals in 16 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/mexico/cancun/cun"
+                      >Cancun Airport</a
+                    >
+                    from € 20.34 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/mexico/guadalajara"
+                      >Guadalajara</a
+                    >
+                    - 476 deals in 10 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/mexico/guadalajara/gdl"
+                      >Guadalajara Airport</a
+                    >
+                    from € 14.92 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/mexico/merida"
+                      >Merida</a
+                    >
+                    - 345 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/mexico/merida/mid"
+                      >Merida Airport</a
+                    >
+                    from € 17.67 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/mexico/mexico"
+                      >Mexico City</a
+                    >
+                    - 914 deals in 19 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/mexico/mexico/mex"
+                      >Mexico City International Airport</a
+                    >
+                    from € 20.49 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/mexico/playa-del-carmen"
+                      >Playa del Carmen</a
+                    >
+                    - 311 deals in 10 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/mexico/puerto-vallarta"
+                      >Puerto Vallarta</a
+                    >
+                    - 312 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/mexico/puerto-vallarta/pvr"
+                      >Puerto Vallarta Airport</a
+                    >
+                    from € 18.45 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/mexico/san-jose-del-cabo"
+                      >San Jose del Cabo</a
+                    >
+                    - 502 deals in 10 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/mexico/san-jose-del-cabo/sjd"
+                      >Los Cabos Int. Airport</a
+                    >
+                    from € 18.73 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag us"></div>
+                <div>
+                  <a href="https://www.discovercars.com/usa-minnesota"
+                    >Minnesota</a
+                  >
+                  <div class="tl-offers text-xs">
+                    209 car rental offers in 5 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/usa-minnesota/minneapolis"
+                      >Minneapolis</a
+                    >
+                    - 134 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/usa-minnesota/minneapolis/msp"
+                      >Minneapolis Airport</a
+                    >
+                    from € 51.92 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag ma"></div>
+                <div>
+                  <a href="https://www.discovercars.com/morocco">Morocco</a>
+                  <div class="tl-offers text-xs">
+                    5919 car rental offers in 16 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/morocco/agadir"
+                      >Agadir</a
+                    >
+                    - 722 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/morocco/agadir/aga"
+                      >Agadir Airport</a
+                    >
+                    from € 10.95 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/morocco/casablanca"
+                      >Casablanca</a
+                    >
+                    - 1263 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/morocco/casablanca/cmn"
+                      >Casablanca Airport</a
+                    >
+                    from € 9.50 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/morocco/fez">Fes</a> -
+                    633 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/morocco/fez/fez"
+                      >Fes Airport</a
+                    >
+                    from € 9.50 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/morocco/marrakech"
+                      >Marrakech</a
+                    >
+                    - 1120 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/morocco/marrakech/rak"
+                      >Marrakech Airport</a
+                    >
+                    from € 9.14 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/morocco/rabat"
+                      >Rabat</a
+                    >
+                    - 1105 deals in 11 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/morocco/tangier"
+                      >Tangier</a
+                    >
+                    - 849 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/morocco/tangier/tng"
+                      >Tanger Airport</a
+                    >
+                    from € 13.14 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag nz"></div>
+                <div>
+                  <a href="https://www.discovercars.com/new-zealand"
+                    >New Zealand</a
+                  >
+                  <div class="tl-offers text-xs">
+                    1393 car rental offers in 27 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/new-zealand/auckland"
+                      >Auckland</a
+                    >
+                    - 346 deals in 14 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/auckland/akl"
+                      >Auckland Airport</a
+                    >
+                    from € 13.01 per day
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/auckland/downtown"
+                      >Downtown</a
+                    >
+                    from € 18.86 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/christchurch"
+                      >Christchurch</a
+                    >
+                    - 281 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/christchurch/chc"
+                      >Christchurch Airport</a
+                    >
+                    from € 15.21 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/queenstown"
+                      >Queenstown</a
+                    >
+                    - 239 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/queenstown/zqn"
+                      >Queenstown Airport</a
+                    >
+                    from € 13.54 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/wellington"
+                      >Wellington</a
+                    >
+                    - 135 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/new-zealand/wellington/wlg"
+                      >Wellington Airport</a
+                    >
+                    from € 21.81 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag pl"></div>
+                <div>
+                  <a href="https://www.discovercars.com/poland">Poland</a>
+                  <div class="tl-offers text-xs">
+                    8307 car rental offers in 48 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/poland/gdansk"
+                      >Gdansk</a
+                    >
+                    - 1025 deals in 9 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/gdansk/gdn"
+                      >Gdansk Airport</a
+                    >
+                    from € 8.74 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/poland/katowice"
+                      >Katowice</a
+                    >
+                    - 870 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/katowice/ktw"
+                      >Katowice Airport</a
+                    >
+                    from € 12.53 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/poland/krakow"
+                      >Krakow</a
+                    >
+                    - 1087 deals in 9 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/krakow/krk"
+                      >Krakow Airport</a
+                    >
+                    from € 8.20 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/poland/poznan"
+                      >Poznan</a
+                    >
+                    - 591 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/poznan/poz"
+                      >Poznan Airport</a
+                    >
+                    from € 8.03 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/poland/rzeszow"
+                      >Rzeszow</a
+                    >
+                    - 553 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/rzeszow/rze"
+                      >Rzeszów Airport</a
+                    >
+                    from € 9.00 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/poland/warsaw"
+                      >Warsaw</a
+                    >
+                    - 1806 deals in 21 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/warsaw/waw"
+                      >Warsaw Airport</a
+                    >
+                    from € 5.05 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/warsaw/wmi"
+                      >Warsaw Modlin Airport</a
+                    >
+                    from € 8.78 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/poland/wroclaw"
+                      >Wroclaw</a
+                    >
+                    - 698 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/poland/wroclaw/wro"
+                      >Wroclaw Airport</a
+                    >
+                    from € 10.77 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag pt"></div>
+                <div>
+                  <a href="https://www.discovercars.com/portugal">Portugal</a>
+                  <div class="tl-offers text-xs">
+                    6033 car rental offers in 127 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/portugal/faro"
+                      >Faro</a
+                    >
+                    - 692 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/portugal/faro/fao"
+                      >Faro Airport</a
+                    >
+                    from € 9.68 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/portugal/funchal"
+                      >Funchal</a
+                    >
+                    - 187 deals in 3 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/portugal/lisbon"
+                      >Lisbon</a
+                    >
+                    - 1505 deals in 15 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/portugal/lisbon/downtown"
+                      >Downtown</a
+                    >
+                    from € 6.56 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/portugal/lisbon/lis"
+                      >Lisbon Airport</a
+                    >
+                    from € 4.24 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/portugal/madeira"
+                      >Madeira</a
+                    >
+                    - 349 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/portugal/madeira/fnc"
+                      >Madeira Funchal Airport</a
+                    >
+                    from € 31.24 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/portugal/porto"
+                      >Porto</a
+                    >
+                    - 844 deals in 5 locations
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/portugal/porto/downtown"
+                      >Downtown</a
+                    >
+                    from € 8.41 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/portugal/porto/opo"
+                      >Porto Airport</a
+                    >
+                    from € 4.84 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag ro"></div>
+                <div>
+                  <a href="https://www.discovercars.com/romania">Romania</a>
+                  <div class="tl-offers text-xs">
+                    2124 car rental offers in 17 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/romania/bucharest"
+                      >Bucharest</a
+                    >
+                    - 680 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/romania/bucharest/otp"
+                      >Bucharest Airport</a
+                    >
+                    from € 2.19 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/romania/cluj-napoca"
+                      >Cluj-Napoca</a
+                    >
+                    - 318 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/romania/cluj-napoca/clj"
+                      >Cluj-Napoca Airport</a
+                    >
+                    from € 6.39 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag it"></div>
+                <div>
+                  <a href="https://www.discovercars.com/italy-sardinia"
+                    >Sardinia</a
+                  >
+                  <div class="tl-offers text-xs">
+                    1815 car rental offers in 13 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-sardinia/alghero"
+                      >Alghero</a
+                    >
+                    - 390 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-sardinia/alghero/aho"
+                      >Alghero Fertilia Airport</a
+                    >
+                    from € 22.27 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/italy-sardinia/cagliari"
+                      >Cagliari</a
+                    >
+                    - 706 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-sardinia/cagliari/cag"
+                      >Cagliari Airport</a
+                    >
+                    from € 9.59 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-sardinia/olbia"
+                      >Olbia</a
+                    >
+                    - 644 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-sardinia/olbia/olb"
+                      >Olbia Airport</a
+                    >
+                    from € 14.33 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag it"></div>
+                <div>
+                  <a href="https://www.discovercars.com/italy-sicily">Sicily</a>
+                  <div class="tl-offers text-xs">
+                    2560 car rental offers in 26 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-sicily/catania"
+                      >Catania</a
+                    >
+                    - 778 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-sicily/catania/cta"
+                      >Catania Fontanarossa Airport</a
+                    >
+                    from € 6.95 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-sicily/palermo"
+                      >Palermo</a
+                    >
+                    - 805 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-sicily/palermo/pmo"
+                      >Palermo Airport</a
+                    >
+                    from € 13.54 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/italy-sicily/trapani"
+                      >Trapani</a
+                    >
+                    - 287 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/italy-sicily/trapani/tps"
+                      >Trapani Airport</a
+                    >
+                    from € 18.94 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag za"></div>
+                <div>
+                  <a href="https://www.discovercars.com/south-africa"
+                    >South Africa</a
+                  >
+                  <div class="tl-offers text-xs">
+                    3086 car rental offers in 67 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/south-africa/cape-town"
+                      >Cape Town</a
+                    >
+                    - 338 deals in 11 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/south-africa/cape-town/cpt"
+                      >Cape Town Airport</a
+                    >
+                    from € 10.54 per day
+                  </div>
+                  <div class="tl-item downtown">
+                    <a
+                      href="https://www.discovercars.com/south-africa/cape-town/downtown"
+                      >Downtown</a
+                    >
+                    from € 15.38 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/south-africa/durban"
+                      >Durban</a
+                    >
+                    - 225 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/south-africa/durban/dur"
+                      >King Shaka International Airport</a
+                    >
+                    from € 15.38 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/south-africa/johannesburg"
+                      >Johannesburg</a
+                    >
+                    - 327 deals in 12 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/south-africa/johannesburg/jnb"
+                      >Tambo International Airport</a
+                    >
+                    from € 16.12 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/south-africa/port-elizabeth"
+                      >Port Elizabeth</a
+                    >
+                    - 102 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/south-africa/port-elizabeth/plz"
+                      >Port Elizabeth Airport</a
+                    >
+                    from € 17.05 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag es"></div>
+                <div>
+                  <a href="https://www.discovercars.com/spain">Spain</a>
+                  <div class="tl-offers text-xs">
+                    17088 car rental offers in 124 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/alicante"
+                      >Alicante</a
+                    >
+                    - 769 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/alicante/alc"
+                      >Alicante Airport</a
+                    >
+                    from € 8.36 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/barcelona"
+                      >Barcelona</a
+                    >
+                    - 1268 deals in 13 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/barcelona/bcn"
+                      >Barcelona Airport</a
+                    >
+                    from € 5.82 per day
+                  </div>
+                  <div class="tl-item railway">
+                    <a
+                      href="https://www.discovercars.com/spain/barcelona/barcelona-train-station"
+                      >Barcelona Train Station</a
+                    >
+                    from € 13.42 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/bilbao"
+                      >Bilbao</a
+                    >
+                    - 512 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/bilbao/bio"
+                      >Bilbao Airport</a
+                    >
+                    from € 8.71 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/girona"
+                      >Girona</a
+                    >
+                    - 262 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/girona/gro"
+                      >Girona Airport</a
+                    >
+                    from € 18.46 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/madrid"
+                      >Madrid</a
+                    >
+                    - 2405 deals in 36 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/madrid/mad"
+                      >Madrid Airport</a
+                    >
+                    from € 5.98 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/malaga"
+                      >Malaga</a
+                    >
+                    - 892 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/malaga/agp"
+                      >Malaga Airport</a
+                    >
+                    from € 8.98 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/murcia"
+                      >Murcia</a
+                    >
+                    - 261 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/murcia/rmu"
+                      >Region de Murcia International Airport</a
+                    >
+                    from € 15.01 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/seville"
+                      >Seville</a
+                    >
+                    - 891 deals in 5 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/seville/svq"
+                      >Seville Airport</a
+                    >
+                    from € 14.01 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/spain/valencia"
+                      >Valencia</a
+                    >
+                    - 1131 deals in 14 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/spain/valencia/vlc"
+                      >Valencia Airport</a
+                    >
+                    from € 8.84 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag ch"></div>
+                <div>
+                  <a href="https://www.discovercars.com/switzerland"
+                    >Switzerland</a
+                  >
+                  <div class="tl-offers text-xs">
+                    1913 car rental offers in 40 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/switzerland/geneva"
+                      >Geneva</a
+                    >
+                    - 302 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/switzerland/geneva/gva"
+                      >Geneva Airport</a
+                    >
+                    from € 45.00 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/switzerland/zurich"
+                      >Zurich</a
+                    >
+                    - 374 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/switzerland/zurich/zrh"
+                      >Zurich Airport</a
+                    >
+                    from € 56.42 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag us"></div>
+                <div>
+                  <a href="https://www.discovercars.com/usa-texas">Texas</a>
+                  <div class="tl-offers text-xs">
+                    1448 car rental offers in 18 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-texas/dallas"
+                      >Dallas</a
+                    >
+                    - 300 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/usa-texas/dallas/dfw"
+                      >Dallas Fort Worth Airport</a
+                    >
+                    from € 55.10 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/usa-texas/houston"
+                      >Houston</a
+                    >
+                    - 276 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/usa-texas/houston/iah"
+                      >Houston Airport</a
+                    >
+                    from € 48.39 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag th"></div>
+                <div>
+                  <a href="https://www.discovercars.com/thailand">Thailand</a>
+                  <div class="tl-offers text-xs">
+                    297 car rental offers in 20 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/thailand/bangkok"
+                      >Bangkok</a
+                    >
+                    - 110 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/thailand/bangkok/bkk"
+                      >Bangkok Suvarnabhumi Airport</a
+                    >
+                    from € 20.60 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/thailand/phuket"
+                      >Phuket</a
+                    >
+                    - 54 deals in 3 locations
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag tr"></div>
+                <div>
+                  <a href="https://www.discovercars.com/turkey">Turkey</a>
+                  <div class="tl-offers text-xs">
+                    10216 car rental offers in 118 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/ankara"
+                      >Ankara</a
+                    >
+                    - 845 deals in 14 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/antalya"
+                      >Antalya</a
+                    >
+                    - 876 deals in 11 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/antalya/ayt"
+                      >Antalya Airport International Arrivals</a
+                    >
+                    from € 18.14 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/bodrum"
+                      >Bodrum</a
+                    >
+                    - 435 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/bodrum/bjv"
+                      >Bodrum Airport</a
+                    >
+                    from € 22.58 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/dalaman"
+                      >Dalaman</a
+                    >
+                    - 445 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/dalaman/dlm"
+                      >Dalaman Airport</a
+                    >
+                    from € 23.65 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/istanbul"
+                      >Istanbul</a
+                    >
+                    - 2533 deals in 45 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/istanbul/isl"
+                      >Istanbul Airport</a
+                    >
+                    from € 20.42 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/istanbul/saw"
+                      >Istanbul Sabiha Gokcen Airport</a
+                    >
+                    from € 18.01 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/izmir"
+                      >Izmir</a
+                    >
+                    - 801 deals in 14 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/izmir/adb"
+                      >Izmir Airport</a
+                    >
+                    from € 18.28 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/kayseri"
+                      >Kayseri</a
+                    >
+                    - 461 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/kayseri/asr"
+                      >Kayseri International Airport</a
+                    >
+                    from € 21.92 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/nevsehir"
+                      >Nevsehir</a
+                    >
+                    - 256 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/nevsehir/nav"
+                      >Nevsehir Airport</a
+                    >
+                    from € 32.90 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/turkey/trabzon"
+                      >Trabzon</a
+                    >
+                    - 386 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a href="https://www.discovercars.com/turkey/trabzon/tzx"
+                      >Trabzon Airport</a
+                    >
+                    from € 22.44 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag ae"></div>
+                <div>
+                  <a href="https://www.discovercars.com/united-arab-emirates"
+                    >United Arab Emirates</a
+                  >
+                  <div class="tl-offers text-xs">
+                    3871 car rental offers in 9 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-arab-emirates/abu-dhabi"
+                      >Abu Dhabi</a
+                    >
+                    - 408 deals in 24 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-arab-emirates/abu-dhabi/auh"
+                      >Abu Dhabi Airport</a
+                    >
+                    from € 16.71 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-arab-emirates/dubai"
+                      >Dubai</a
+                    >
+                    - 2821 deals in 47 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-arab-emirates/dubai/dxb"
+                      >Dubai Int. Airport</a
+                    >
+                    from € 15.50 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-arab-emirates/sharjah"
+                      >Sharjah</a
+                    >
+                    - 409 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-arab-emirates/sharjah/shj"
+                      >Sharjah Airport</a
+                    >
+                    from € 16.12 per day
+                  </div>
+                </div>
+              </div>
+              <div
+                class="border border-solid border-[#d8d8d8] p-3 flex flex-col sm:flex-row sm:items-center gap-3 md:gap-5 rounded-[4px]"
+              >
+                <div class="flag gb"></div>
+                <div>
+                  <a href="https://www.discovercars.com/united-kingdom"
+                    >United Kingdom</a
+                  >
+                  <div class="tl-offers text-xs">
+                    7544 car rental offers in 271 cities
+                  </div>
+                </div>
+                <span class="tl-open"></span>
+                <div class="tl-items" style="display: none">
+                  <div class="tl-sub-heading">Most popular locations:</div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/belfast"
+                      >Belfast</a
+                    >
+                    - 257 deals in 5 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/birmingham"
+                      >Birmingham</a
+                    >
+                    - 340 deals in 3 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/birmingham/bhx"
+                      >Birmingham Airport</a
+                    >
+                    from € 18.79 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/bristol"
+                      >Bristol</a
+                    >
+                    - 271 deals in 6 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/edinburgh"
+                      >Edinburgh</a
+                    >
+                    - 549 deals in 4 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/edinburgh/edi"
+                      >Edinburgh Airport</a
+                    >
+                    from € 20.05 per day
+                  </div>
+                  <div class="tl-item railway">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/edinburgh/edinburgh-waverley-railway-station"
+                      >Edinburgh Waverley Train Station</a
+                    >
+                    from € 31.22 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/gatwick"
+                      >Gatwick</a
+                    >
+                    - 267 deals in 1 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/gatwick/lgw"
+                      >London Airport Gatwick</a
+                    >
+                    from € 17.04 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/glasgow"
+                      >Glasgow</a
+                    >
+                    - 469 deals in 6 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/glasgow/gla"
+                      >Glasgow Airport</a
+                    >
+                    from € 15.31 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/inverness"
+                      >Inverness</a
+                    >
+                    - 164 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/inverness/inv"
+                      >Inverness Airport</a
+                    >
+                    from € 43.44 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/liverpool"
+                      >Liverpool</a
+                    >
+                    - 426 deals in 3 locations
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/united-kingdom/london"
+                      >London</a
+                    >
+                    - 1611 deals in 38 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/london/lhr"
+                      >London Heathrow Airport</a
+                    >
+                    from € 15.79 per day
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/london/stn"
+                      >London Stansted Airport</a
+                    >
+                    from € 17.54 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a href="https://www.discovercars.com/united-kingdom/luton"
+                      >Luton</a
+                    >
+                    - 235 deals in 2 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/luton/ltn"
+                      >Luton Airport</a
+                    >
+                    from € 20.71 per day
+                  </div>
+                  <div class="tl-item city">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/manchester"
+                      >Manchester</a
+                    >
+                    - 415 deals in 7 locations
+                  </div>
+                  <div class="tl-item airport">
+                    <a
+                      href="https://www.discovercars.com/united-kingdom/manchester/man"
+                      >Manchester Airport</a
+                    >
+                    from € 23.43 per day
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -904,7 +4199,7 @@
         <div class="contain">
           <h2 class="text-3xl mb-6">FAQ</h2>
 
-          <div class="grid grid-cols-2 gap-6">
+          <div class="grid md:grid-cols-2 gap-6">
             <div>
               <div class="font-bold mb-2">What do I need to rent a car?</div>
               <p class="text-sm">
@@ -980,8 +4275,12 @@
       <section class="wrapper py-[60px]">
         <div class="contain">
           <div class="p-6 rounded-lg bg-clr-6">
-            <div class="flex justify-between items-center gap-6">
-              <div class="flex items-center gap-6">
+            <div
+              class="flex flex-col md:flex-row justify-between md:items-center gap-6"
+            >
+              <div
+                class="flex flex-col sm:flex-row items-start sm:items-center gap-6"
+              >
                 <img
                   class="rounded-md"
                   src="./assets/vectors/common/logo-2.svg"
@@ -1019,7 +4318,9 @@
 
       <section class="wrapper py-[60px] bg-clr-1">
         <div class="contain">
-          <div class="flex gap-6 justify-between items-center">
+          <div
+            class="flex lg:flex-row flex-col gap-6 justify-between lg:items-center items-start"
+          >
             <svg
               class="icon-container"
               width="80"
@@ -1050,9 +4351,9 @@
             </div>
 
             <div class="">
-              <div class="flex gap-3 mb-3">
+              <div class="flex flex-col sm:flex-row gap-3 mb-3">
                 <input
-                  class="bg-white rounded-[4px] block h-[46px] px-3 text-base outline-none w-[300px]"
+                  class="bg-white rounded-[4px] block h-[46px] px-3 text-base outline-none w-full sm:w-[300px]"
                   type="text"
                   placeholder="Your email address"
                 />
@@ -1066,198 +4367,177 @@
           </div>
         </div>
       </section>
+    </main>
 
-      <footer class="wrapper py-[60px] bg-clr-7">
-        <div class="contain">
-          <img
-            class="mb-10"
-            src="./assets/vectors/common/logo-dark.svg"
-            alt="logo"
-          />
+    <footer class="wrapper py-[60px] bg-clr-7">
+      <div class="contain">
+        <img
+          class="mb-10"
+          src="./assets/vectors/common/logo-dark.svg"
+          alt="logo"
+        />
 
-          <div class="grid gap-6 grid-cols-4">
-            <div>
-              <div class="text-white font-bold mb-3">Company</div>
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >About Us</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Careers</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Blog</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Authors</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Reviews</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Awards</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Locations</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Types of Cars</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Suppliers List</a
-              >
-            </div>
-            <div>
-              <div class="text-white font-bold mb-3">Support</div>
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >My Booking</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Help center</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Our Guarentee</a
-              >
-            </div>
-            <div>
-              <div class="text-white font-bold mb-3">Partnership</div>
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Affiliate Program</a
-              >
-              <a
-                href="#0"
-                class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
-                >Travel Partners</a
-              >
-            </div>
-            <div class="flex justify-end items-start">
-              <div class="flex items-center gap-4">
-                <img
-                  class="w-14"
-                  src="./assets/vectors/landing/worlds-best-car-rental-booking-website-2022-winner-shield-gold-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-14"
-                  src="./assets/imgs/landing/magellan-gold-2022.png"
-                  alt=""
-                />
-              </div>
-            </div>
+        <div class="grid gap-6 grid-cols-2 sm:grid-cols-4">
+          <div>
+            <div class="text-white font-bold mb-3">Company</div>
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >About Us</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Careers</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Blog</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Authors</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Reviews</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Awards</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Locations</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Types of Cars</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Suppliers List</a
+            >
           </div>
-
-          <div class="mt-20 mb-10">
-            <div class="flex justify-between items-center">
-              <div class="flex gap-6">
-                <div class="flex gap-1">
-                  <img src="./assets/vectors/common/play-store.svg" alt="" />
-                  <img src="./assets/vectors/common/apple-store.svg" alt="" />
-                </div>
-                <div class="flex gap-1">
-                  <div class="payments-type visa" title="Visa"></div>
-                  <div
-                    class="payments-type mastercard"
-                    title="Mastercard"
-                  ></div>
-                  <div class="payments-type maestro" title="Maestro"></div>
-                  <div class="payments-type amex" title="AMEX"></div>
-                  <div class="payments-type paypal" title="Paypal"></div>
-                </div>
-                <div class="flex gap-1">
-                  <img src="./assets/imgs/common/positivessl.png" alt="ssl" />
-                </div>
-              </div>
-
-              <div class="flex gap-3 items-center">
-                <a
-                  class="opacity-70 transition-all hover:opacity-100"
-                  href="#0"
-                >
-                  <img src="./assets/vectors/common/fb.svg" alt="fb" />
-                </a>
-                <a
-                  class="opacity-70 transition-all hover:opacity-100"
-                  href="#0"
-                >
-                  <img src="./assets/vectors/common/insta.svg" alt="insta" />
-                </a>
-                <a
-                  class="opacity-70 transition-all hover:opacity-100"
-                  href="#0"
-                >
-                  <img
-                    src="./assets/vectors/common/linkedin.svg"
-                    alt="linkedin"
-                  />
-                </a>
-                <a
-                  class="opacity-70 transition-all hover:opacity-100"
-                  href="#0"
-                >
-                  <img src="./assets/vectors/common/yt.svg" alt="yt" />
-                </a>
-                <a
-                  class="opacity-70 transition-all hover:opacity-100"
-                  href="#0"
-                >
-                  <img
-                    src="./assets/vectors/common/twitter.svg"
-                    alt="twitter"
-                  />
-                </a>
-              </div>
-            </div>
+          <div>
+            <div class="text-white font-bold mb-3">Support</div>
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >My Booking</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Help center</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Our Guarentee</a
+            >
           </div>
-
-          <div class="flex gap-5">
-            <div class="text-[rgba(255,255,255,.7)]">
-              © 2011 - 2023 AS Discover Car Hire All Rights Reserved.
+          <div>
+            <div class="text-white font-bold mb-3">Partnership</div>
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Affiliate Program</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Travel Partners</a
+            >
+          </div>
+          <div class="flex justify-end items-start">
+            <div class="flex items-center gap-4">
+              <img
+                class="w-14"
+                src="./assets/vectors/landing/worlds-best-car-rental-booking-website-2022-winner-shield-gold-1.svg"
+                alt=""
+              />
+              <img
+                class="w-14"
+                src="./assets/imgs/landing/magellan-gold-2022.png"
+                alt=""
+              />
             </div>
-
-            <a
-              class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
-              href="#"
-              >Privacy Policy</a
-            >
-            <a
-              class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
-              href="#"
-              >Cookie policy</a
-            >
-            <a
-              class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
-              href="#"
-              >Terms &amp; Conditionsy</a
-            >
           </div>
         </div>
-      </footer>
-    </main>
+
+        <div class="mt-20 mb-10">
+          <div class="flex justify-between items-center flex-wrap gap-4">
+            <div class="flex flex-wrap gap-6">
+              <div class="flex gap-1">
+                <img src="./assets/vectors/common/play-store.svg" alt="" />
+                <img src="./assets/vectors/common/apple-store.svg" alt="" />
+              </div>
+              <div class="flex gap-1">
+                <div class="payments-type visa" title="Visa"></div>
+                <div class="payments-type mastercard" title="Mastercard"></div>
+                <div class="payments-type maestro" title="Maestro"></div>
+                <div class="payments-type amex" title="AMEX"></div>
+                <div class="payments-type paypal" title="Paypal"></div>
+              </div>
+              <div class="flex gap-1">
+                <img src="./assets/imgs/common/positivessl.png" alt="ssl" />
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-center">
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/fb.svg" alt="fb" />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/insta.svg" alt="insta" />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img
+                  src="./assets/vectors/common/linkedin.svg"
+                  alt="linkedin"
+                />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/yt.svg" alt="yt" />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/twitter.svg" alt="twitter" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-5">
+          <div class="text-[rgba(255,255,255,.7)]">
+            © 2011 - 2023 AS Discover Car Hire All Rights Reserved.
+          </div>
+
+          <a
+            class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
+            href="#"
+            >Cookie policy</a
+          >
+          <a
+            class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
+            href="#"
+            >Terms &amp; Conditions</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <script
       type="text/javascript"

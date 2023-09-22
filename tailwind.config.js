@@ -8,6 +8,7 @@ module.exports = {
           1: "#f1f3f4",
           2: "#333333",
           3: "#757575",
+          4: "#9c9c9c",
         },
         clr: {
           1: "#0a578c",
@@ -25,6 +26,9 @@ module.exports = {
       backgroundImage: {
         landingHero: "url(../imgs/landing/bg.jpg)",
         landingVideo: "url(../imgs/landing/watch-video.png)",
+      },
+      content: {
+        dropdownIcon: "url(../vectors/common/arrow-dropdown.svg)",
       },
     },
   },
