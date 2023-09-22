@@ -919,6 +919,10 @@ p {
   width: 1rem;
 }
 
+.w-\[120px\] {
+  width: 120px;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
