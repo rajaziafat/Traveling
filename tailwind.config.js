@@ -9,6 +9,7 @@ module.exports = {
           2: "#333333",
           3: "#757575",
           4: "#9c9c9c",
+          5: "#d8d8d8",
         },
         clr: {
           1: "#0a578c",
@@ -18,6 +19,7 @@ module.exports = {
           5: "#008700",
           6: "#0082ce",
           7: "#0b436a",
+          8: "#ff4b00",
         },
       },
       fontFamily: {
@@ -26,6 +28,7 @@ module.exports = {
       backgroundImage: {
         landingHero: "url(../imgs/landing/bg.jpg)",
         landingVideo: "url(../imgs/landing/watch-video.png)",
+        carMap: "url(../vectors/car/map.svg)",
       },
       content: {
         dropdownIcon: "url(../vectors/common/arrow-dropdown.svg)",

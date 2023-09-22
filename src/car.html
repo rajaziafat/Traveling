@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Best Car Rental Deals with Free Cancellation, Compare & Save! | Discover
+      Cars
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./assets/css/images.css" />
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link rel="stylesheet" href="./assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
+  </head>
+  <body>
+    <div
+      id="overlay"
+      class="bg-[rgba(0,0,0,0.5)] fixed left-0 top-0 right-0 bottom-0 z-50 hidden md:hidden"
+    ></div>
+    <header>
+      <nav id="sidebar" class="bg-white shadow-md h-[60px] relative z-50">
+        <div class="flex items-center justify-between h-full px-5">
+          <a class="" href="./index.html">
+            <img
+              class="w-[134px]"
+              src="./assets/vectors/common/logo.svg"
+              alt="logo"
+            />
+          </a>
+          <img
+            id="hamburger"
+            class="md:hidden block"
+            src="./assets/vectors/common/burger.svg"
+            alt="burger"
+          />
+          <ul
+            id="menu"
+            class="md:static fixed top-0 -right-[320px] bg-white md:bg-transparent w-[320px] md:w-auto py-10 md:py-0 flex md:flex-row flex-col h-screen md:h-full transition-all"
+          >
+            <div
+              id="cross-menu"
+              class="block md:hidden absolute right-10 top-4 font-bold text-3xl"
+            >
+              &times;
+            </div>
+            <li
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+            >
+              EUR
+              <img
+                class="w-[10px]"
+                src="./assets/vectors/common/arrow-dropdown.svg"
+                alt="arrow"
+              />
+            </li>
+            <li
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+            >
+              English
+              <img
+                class="w-[10px]"
+                src="./assets/vectors/common/arrow-dropdown.svg"
+                alt="arrow"
+              />
+            </li>
+            <li
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+            >
+              Help
+            </li>
+            <li
+              class="md:h-full hover:bg-grey-1 px-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2"
+            >
+              Manage Booking
+            </li>
+            <li
+              class="md:h-full hover:bg-grey-1 pl-5 py-4 md:py-0 cursor-pointer flex items-center gap-2 text-clr-1 hover:text-clr-2 group"
+            >
+              <img
+                class="group-hover:hidden"
+                src="./assets/vectors/common/user.svg"
+                alt="user"
+              />
+              <img
+                class="group-hover:block hidden"
+                src="./assets/vectors/common/user-2.svg"
+                alt="user"
+              />
+              Log in
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-grey-1">
+      <div class="wrapper">
+        <div class="contain pt-3">
+          <div class="w-full mb-3 table">
+            <div
+              class="relative table-cell text-center w-1/4 pb-[22px] before:bg-clr-3 before:left-0 before:absolute before:top-6 before:w-full before:h-1"
+            >
+              <a
+                class="relative text-clr-1 bottom-1 text-[9px] sm:text-xs before:absolute before:bg-clr-3 before:top-[17px] before:left-1/2 before:-translate-x-1/2 before:block before:w-4 before:h-4 before:rounded-[50%]"
+                href="./search.html"
+              >
+                Select vehicle
+              </a>
+            </div>
+            <div
+              class="relative table-cell text-center w-1/4 pb-[22px] before:bg-clr-3 before:left-0 before:absolute before:top-6 before:w-full before:h-1"
+            >
+              <div
+                class="relative text-clr-1 bottom-1 text-[9px] sm:text-xs before:absolute before:bg-white before:border-[3px] before:border-solid before:border-clr-3 before:top-[17px] before:left-1/2 before:-translate-x-1/2 before:block before:w-4 before:h-4 before:rounded-[50%]"
+              >
+                Booking details
+              </div>
+            </div>
+            <div
+              class="relative table-cell text-center w-1/4 pb-[22px] before:bg-[#d8d8d8] before:left-0 before:absolute before:top-6 before:w-full before:h-1"
+            >
+              <div
+                class="relative text-clr-1 bottom-1 text-[9px] sm:text-xs before:absolute before:bg-[#d8d8d8] before:top-[17px] before:left-1/2 before:-translate-x-1/2 before:block before:w-4 before:h-4 before:rounded-[50%]"
+              >
+                Secure payment
+              </div>
+            </div>
+            <div
+              class="relative table-cell text-center w-1/4 pb-[22px] before:bg-[#d8d8d8] before:left-0 before:absolute before:top-6 before:w-full before:h-1"
+            >
+              <div
+                class="relative text-clr-1 bottom-1 text-[9px] sm:text-xs before:absolute before:bg-[#d8d8d8] before:top-[17px] before:left-1/2 before:-translate-x-1/2 before:block before:w-4 before:h-4 before:rounded-[50%]"
+              >
+                Confirmation
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row mb-3">
+            <div class="lg:w-2/3">
+              <div class="rounded shadow-md p-2 bg-white">
+                <div class="flex flex-col sm:flex-row items-stretch">
+                  <div class="pl-3 pt-1 pr-2">
+                    <div class="text-grey-3 font-semibold text-xs mb-1">
+                      PICK-UP
+                    </div>
+
+                    <div class="text-xl font-bold mb-1">
+                      24 September 2023, Sunday, 11:00 am
+                    </div>
+
+                    <div class="mb-1 text-[#333]">Lisbon Airport (LIS)</div>
+                    <div class="my-1 text-[#757575] text-xs">
+                      Address: Av Das Escolas 5B, 2 Arm A01, 2685-210 Portela
+                    </div>
+
+                    <div class="mt-5 mb-1">
+                      <div class="flex items-center gap-3 mb-3">
+                        <img
+                          class="w-6 h-6"
+                          src="./assets/vectors/common/location.svg"
+                          alt=""
+                        />
+
+                        <div>
+                          <div class="font-bold text-xs">Pick-up location</div>
+                          <div class="border-b border-dashed border-black">
+                            Free shuttle service
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-3 mb-3">
+                        <img
+                          class="w-6 h-6"
+                          src="./assets/vectors/common/time.svg"
+                          alt=""
+                        />
+
+                        <div>
+                          <div class="font-bold text-xs">Business hours</div>
+                          <div class="border-b border-dashed border-black">
+                            Sunday 08:30 - 20:30
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-3 mb-3">
+                        <img
+                          class="w-6 h-6"
+                          src="./assets/vectors/common/info.svg"
+                          alt=""
+                        />
+
+                        <div>
+                          <div class="font-bold text-xs">
+                            Pick-up instructions
+                          </div>
+                          <div class="">
+                            In the arrivals the client should leave by the exit
+                            4 and go to the aerobus shuttle stop, if there is no
+                            cheaprent shuttle on the stop please call right away
+                            to this number +351210987077.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="h-[200px] sm:h-auto sm:w-[200px] flex-shrink-0 bg-carMap bg-cover relative"
+                  >
+                    <button
+                      class="absolute left-3 right-3 bottom-3 bg-white rounded h-10 border border-solid border-[rgba(0,0,0,0.1)] text-clr-2 hover:bg-[rgba(255,255,255,0.1)] transition-colors"
+                    >
+                      Show on map
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h-[34px] lg:h-auto lg:w-[34px] flex-shrink-0 flex justify-center items-center"
+            >
+              <img
+                class="lg:-rotate-90 w-4"
+                src="./assets/vectors/search/arrow.svg"
+                alt="arrow"
+              />
+            </div>
+            <div class="lg:w-1/3 rounded shadow-md p-2 bg-white">
+              <div class="flex items-stretch">
+                <div class="pl-3 pt-1 pr-2">
+                  <div class="text-grey-3 font-semibold text-xs mb-1">
+                    DROP-OFF
+                  </div>
+
+                  <div class="text-xl font-bold mb-1">
+                    2 October 2023, Monday, 11:00 am
+                  </div>
+
+                  <div class="mb-1 text-[#333]">Lisbon Airport (LIS)</div>
+                  <div class="my-1 text-[#757575] text-xs">
+                    Address: Av Das Escolas 5B, 2 Arm A01, 2685-210 Portela
+                  </div>
+
+                  <div class="mt-5 mb-1">
+                    <div class="flex items-center gap-3 mb-3">
+                      <img
+                        class="w-6 h-6"
+                        src="./assets/vectors/common/time.svg"
+                        alt=""
+                      />
+
+                      <div>
+                        <div class="font-bold text-xs">Business hours</div>
+                        <div class="border-b border-dashed border-black">
+                          Monday 08:30 - 20:30
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-3 mb-3">
+                      <img
+                        class="w-6 h-6"
+                        src="./assets/vectors/common/info.svg"
+                        alt=""
+                      />
+
+                      <div>
+                        <div class="font-bold text-xs">
+                          Pick-up instructions
+                        </div>
+                        <div class="">
+                          Please clarify Drop-off instructions with Car Provider
+                          upon Pick-up
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded shadow-md mb-3 bg-white">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="">
+                <div class="grid gap-3 grid-cols-12">
+                  <div class="col-span-12 lg:col-span-4">
+                    <img src="./assets/imgs/search/car.png" alt="car" />
+                  </div>
+                  <div class="col-span-12 lg:col-span-8">
+                    <div>
+                      <span class="text-xl sm:text-2xl font-bold"> Mini </span>
+                      <span class="ml-2"> Fiat 500 or similar </span>
+                    </div>
+
+                    <div class="mt-4 flex gap-3 flex-wrap">
+                      <div
+                        class="text-grey-3 text-sm inline-flex items-center gap-2"
+                      >
+                        <img src="./assets/imgs/search/persons.png" /> 4 seats
+                      </div>
+                      <div
+                        class="text-grey-3 text-sm inline-flex items-center gap-2"
+                      >
+                        <img src="./assets/imgs/search/bag.png" /> 1 bag
+                      </div>
+                      <div
+                        class="text-grey-3 text-sm inline-flex items-center gap-2"
+                      >
+                        <img src="./assets/imgs/search/doors.png" /> 3 doors
+                      </div>
+                      <div
+                        class="text-grey-3 text-sm inline-flex items-center gap-2"
+                      >
+                        <img src="./assets/imgs/search/cooling.png" /> Air
+                        conditioning
+                      </div>
+                      <div
+                        class="text-grey-3 text-sm inline-flex items-center gap-2"
+                      >
+                        <img src="./assets/imgs/search/network.png" /> Manual
+                      </div>
+                      <div
+                        class="text-grey-3 text-sm inline-flex items-center gap-2"
+                      >
+                        <img src="./assets/imgs/search/gasoline.png" />
+                        Gasoline
+                      </div>
+                    </div>
+
+                    <span
+                      class="bg-[#ecf8ff] rounded-sm py-1 px-2 text-clr-1 font-bold text-xs inline-block mt-3"
+                      >PARTIAL PREPAYMENT
+                    </span>
+                  </div>
+                </div>
+
+                <hr class="my-4" />
+
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  <div>
+                    <div class="flex items-center gap-3 mb-4">
+                      <svg
+                        class=""
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        y="320"
+                      >
+                        <path
+                          d="M29.5 4.2l-2.7-2.7c-.3-.3-.7-.3-.9 0-.3.3-.3.7 0 .9l2.2 2.2-2.2 2.2c-.1.1-.2.3-.2.5v2c0 1.5 1.2 2.7 2.7 2.7v11.3c0 .4-.3.7-.7.7-.4 0-.7-.3-.7-.7V22a2 2 0 00-2-2h-.7V2.7c0-1.5-1.2-2.7-2.7-2.7H8.3C6.9 0 5.7 1.2 5.7 2.7v24c-1.5 0-2.7 1.2-2.7 2.7v2c0 .3.3.6.7.6h22.7c.4 0 .7-.3.7-.7v-2c0-1.5-1.2-2.7-2.7-2.7v-5.3h.6c.4 0 .7.3.7.7v1.3c0 1.1.9 2 2 2s2-.9 2-2V4.7c0-.2-.1-.4-.2-.5zm-7.8 7.1c0 .4-.3.7-.7.7H9c-.4 0-.7-.3-.7-.7v-8c0-.3.3-.6.7-.6h12c.4 0 .7.3.7.7v7.9z"
+                        />
+                      </svg>
+                      <div>
+                        <div class="text-sm font-bold">Fuel Policy</div>
+                        <div>Same to same</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <svg
+                        class=""
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 139 139"
+                        y="288"
+                      >
+                        <path
+                          d="M69.9 6.77v-.02h-.8v.02A49.14 49.14 0 0020.75 55.9c0 36.22 42.52 70.6 48.75 75.48 6.23-4.88 48.75-39.26 48.75-75.48A49.14 49.14 0 0069.9 6.76zm0 70.27a25.36 25.36 0 11-.01-50.73 25.36 25.36 0 010 50.73z"
+                        />
+                      </svg>
+                      <div>
+                        <div class="text-sm font-bold">Pick-up location</div>
+                        <div>Free shuttle service</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex flex-col gap-2">
+                      <div class="text-xs flex gap-1">
+                        <img
+                          src="./assets/vectors/search/tick.svg"
+                          class="w-[10px]"
+                        />
+                        Unlimited Mileage
+                      </div>
+                      <div class="text-xs flex gap-1">
+                        <img
+                          src="./assets/vectors/search/tick.svg"
+                          class="w-[10px]"
+                        />
+                        Colission Damage Waver
+                      </div>
+                      <div class="text-xs flex gap-1">
+                        <img
+                          src="./assets/vectors/search/tick.svg"
+                          class="w-[10px]"
+                        />
+                        Theft Protection
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2 lg:col-span-1">
+                    <div
+                      class="flex items-center gap-2 border border-solid border-[#d8d8d8] rounded p-2 mb-2"
+                    >
+                      <img
+                        src="./assets/vectors/search/tick.svg"
+                        class="flex-shrink-0 mt-1"
+                        alt=""
+                      />
+                      <div class="font-semibold text-clr-4 text-sm">
+                        Additional driver for free
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-4" />
+
+                <div
+                  class="flex flex-col lg:flex-row flex-wrap gap-5 justify-between items-center"
+                >
+                  <div class="w-full lg:w-auto">
+                    <div
+                      class="flex justify-between items-center gap-2 flex-wrap"
+                    >
+                      <img
+                        src="./assets/imgs/common/cheeprent.png"
+                        alt="cheaprent"
+                      />
+
+                      <div
+                        class="rounded bg-clr-1 px-3 py-[6px] text-white font-semibold"
+                      >
+                        8.1
+                      </div>
+
+                      <div>
+                        <div class="text-clr-1 text-sm">Excellent</div>
+                        <div class="text-grey-2 text-xs">739 ratings</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#0" class="mt-2 text-clr-2 text-sm block"
+                  >Rental Conditions</a
+                >
+              </div>
+              <div class="bg-grey-1 rounded p-5 flex-shrink-0 md:w-[282px]">
+                <div class="my-5">
+                  <div class="mt-5 px-5 py-4 text-center">
+                    <div class="text-2xl font-bold mb-10">€ 38.70</div>
+                    <div>Cost of rental</div>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div class="pt-4">
+                  <div class="text-sm text-clr-4 font-bold">Good choice</div>
+
+                  <div class="mt-3">
+                    <div class="text-sm mb-2 flex items-start gap-2">
+                      <img src="./assets/vectors/search/tick.svg" class="w-5" />
+                      <div>
+                        <strong> 79% lower price</strong> than the average for
+                        Mini car
+                      </div>
+                    </div>
+                    <div class="text-sm mb-2 flex items-start gap-2">
+                      <img src="./assets/vectors/search/tick.svg" class="w-5" />
+                      <div>
+                        Highly-rated supplier: <strong> 8.1 / 10</strong>
+                      </div>
+                    </div>
+                    <div class="text-sm mb-2 flex items-start gap-2">
+                      <img src="./assets/vectors/search/tick.svg" class="w-5" />
+                      <div>
+                        Complete freedom with <strong>unlimited mileage</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded shadow-md mb-3 bg-white">
+            <div class="rounded overflow-hidden flex mb-2">
+              <div
+                class="bg-[#00a200] w-16 flex justify-center items-center flex-shrink-0"
+              >
+                <img src="./assets/vectors/car/tick.svg" />
+              </div>
+              <div
+                class="p-3 bg-[#e2ffd0] text-clr-4 font-bold flex-grow text-center text-xs sm:text-base"
+              >
+                Your risk for this car is covered! (5% of our customers choose
+                this option)
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center gap-7 sm:gap-10">
+              <img
+                class="w-0 sm:w-16"
+                src="./assets/vectors/car/fc.svg"
+                alt="fc"
+              />
+              <div
+                class="flex flex-col md:flex-row justify-between items-start md:items-center flex-grow py-5"
+              >
+                <label>
+                  <input
+                    class="relative top-[4px] float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] checked:bg-clr-2 border border-solid border-clr-2 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:top-[1px] after:left-[1px] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-clr-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)]"
+                    type="checkbox"
+                    value=""
+                    checked="true"
+                    id="full-coverage"
+                  />
+                  <span
+                    class="inline-block pl-[0.15rem] hover:cursor-pointer text-xl sm:text-2xl font-bold"
+                  >
+                    Choose <span class="text-clr-8">Full Coverage</span> and
+                    relax!
+                  </span>
+                </label>
+                <div><strong>only € 7.00</strong> per day</div>
+              </div>
+            </div>
+
+            <div class="text-sm my-4">
+              When you pick up the car, the rental supplier will block a
+              security deposit on your card. If the car is damaged or stolen,
+              you could lose this entire deposit, but as long as you’ve got our
+              Full Coverage, we’ll refund you up to € 3000.00.
+              <a class="text-clr-2" href="#0">Full Coverage explained</a>
+            </div>
+
+            <div class="overflow-auto">
+              <table class="w-full mb-2 min-w-[500px]">
+                <thead>
+                  <tr>
+                    <th class="py-2 border-b border-solid border-grey-5"></th>
+                    <th
+                      class="py-2 border-b border-solid border-grey-5 no-protect"
+                    >
+                      No, I'm willing to take risk
+                    </th>
+                    <th
+                      class="py-2 border-b border-solid border-grey-5 bg-[#e2ffd0] yes-protect"
+                    >
+                      Yes, I want to protect myself
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="py-2 border-b border-solid border-grey-5">
+                      Deductible/excess charge for damage or theft
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 no-protect"
+                    >
+                      <div class="flex justify-center">
+                        <input
+                          class="relative left-4 top-[4px] float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] checked:bg-clr-2 border border-solid border-clr-2 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:top-[1px] after:left-[1px] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-clr-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)]"
+                          type="checkbox"
+                          value=""
+                          id="no-protect"
+                        />
+                      </div>
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 bg-grey-1 yes-protect"
+                    >
+                      <div class="flex justify-center">
+                        <input
+                          class="relative left-4 top-[4px] float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] checked:bg-clr-2 border border-solid border-clr-2 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:top-[1px] after:left-[1px] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-clr-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)]"
+                          type="checkbox"
+                          value=""
+                          id="yes-protect"
+                          checked
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 border-b border-solid border-grey-5">
+                      Repair costs, including windows, mirrors, wheels
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 no-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img src="./assets/vectors/car/cross.svg" alt="cross" />
+                      </div>
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 bg-grey-1 yes-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          src="./assets/vectors/search/tick.svg"
+                          alt="tick"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 border-b border-solid border-grey-5">
+                      Towing and taxi expenses
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 no-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img src="./assets/vectors/car/cross.svg" alt="cross" />
+                      </div>
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 bg-grey-1 yes-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          src="./assets/vectors/search/tick.svg"
+                          alt="tick"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 border-b border-solid border-grey-5">
+                      Lost keys or lockout fees
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 no-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img src="./assets/vectors/car/cross.svg" alt="cross" />
+                      </div>
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 bg-grey-1 yes-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          src="./assets/vectors/search/tick.svg"
+                          alt="tick"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 border-b border-solid border-grey-5">
+                      Administrative charges
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 no-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img src="./assets/vectors/car/cross.svg" alt="cross" />
+                      </div>
+                    </td>
+                    <td
+                      class="py-2 border-b border-solid border-grey-5 bg-grey-1 yes-protect"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          src="./assets/vectors/search/tick.svg"
+                          alt="tick"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pt-3 grid md:grid-cols-2 gap-6">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <div
+                  class="flex-shrink-0 rounded-[50%] bg-clr-1 flex justify-center items-center text-white w-11 h-11 font-bold"
+                >
+                  AG
+                </div>
+                <div>
+                  <div class="flex items-center gap-1">
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+
+                    <div class="text-grey-4 text-xs ms-3">Feb 3, 2023</div>
+                  </div>
+
+                  <div class="text-sm mt-2">
+                    Excellent best deal brokerage for month-long trip in
+                    Australia. Took full cover - good job as a windscreen chip
+                    cost £715 for replacement. Claim approved with no fuss
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <div
+                  class="flex-shrink-0 rounded-[50%] bg-clr-1 flex justify-center items-center text-white w-11 h-11 font-bold"
+                >
+                  NB
+                </div>
+                <div>
+                  <div class="flex items-center gap-1">
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+                    <img
+                      class="w-3"
+                      src="./assets/vectors/car/star.svg"
+                      alt="star"
+                    />
+
+                    <div class="text-grey-4 text-xs ms-3">Feb 1, 2023</div>
+                  </div>
+
+                  <div class="text-sm mt-2">
+                    During the rental, the car was spotted by a small rock and
+                    the frontal glass was damaged. Fortunately, I had contracted
+                    Full Coverage. One day after I claimed DiscoverCars, the
+                    refund was approved. Very simple, fast and effective
+                    service!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded shadow-md mb-3 bg-white">
+            <div class="accordion">
+              <div
+                class="accordion-head not-styled flex justify-between items-center gap-5 cursor-pointer"
+              >
+                <div class="text-xl font-bold">
+                  Planning to travel to another country?
+                </div>
+                <img
+                  class="w-4 rotate-180 transition-all"
+                  src="./assets/vectors/car/arrow.svg"
+                  alt="arrow"
+                />
+              </div>
+
+              <div class="accordion-body pt-5">
+                <div
+                  class="flex flex-col sm:flex-row border-b border-solid border-[rgba(0,0,0,.15)] tabs"
+                >
+                  <div
+                    class="py-3 px-4 tab border-b border-b-solid border-b-clr-2 text-clr-2 cursor-pointer"
+                    data-toggle="cross-border"
+                    data-tab-group="travel"
+                  >
+                    Cross-border travel
+                  </div>
+                  <div
+                    class="py-3 px-4 tab border-b border-b-solid border-b-transparent cursor-pointer"
+                    data-toggle="ferry"
+                    data-tab-group="travel"
+                  >
+                    Ferry travel
+                  </div>
+                </div>
+
+                <div class="pt-4">
+                  <div class="cross-border tab-content" data-tab-group="travel">
+                    <strong class="text-sm"> You can travel to: </strong>
+                    <div class="text-sm">
+                      Austria, Belgium, Bulgaria, Croatia, Czech Republic,
+                      Denmark, Estonia, Finland, France, Germany, Greece,
+                      Hungary, Italy - Mainland, Latvia, Lithuania, Luxembourg,
+                      Malta, Netherlands, Poland, Romania, Slovakia, Slovenia,
+                      Spain and Sweden
+                    </div>
+                    <div class="text-sm">
+                      You can't travel to countries that aren't listed.
+                    </div>
+                    <div class="mt-5 text-sm">
+                      Cross-border fee: <strong>€ 250.00 </strong>
+                    </div>
+
+                    <div
+                      class="my-4 p-3 border border-solid border-[#fad130] border-l-4 rounded bg-[#fef6d6]"
+                    >
+                      <div>
+                        <strong class="text-sm">Please note:</strong>
+
+                        <ul class="mt-2">
+                          <li class="text-sm">
+                            You'll need the writter permission of the supplier.
+                          </li>
+                          <li class="text-sm">
+                            You'll have to leave a higher deposit.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ferry hidden tab-content" data-tab-group="travel">
+                    <div class="cross-border">
+                      <strong class="text-sm"> You can't use a ferry </strong>
+                    </div>
+                  </div>
+
+                  <div class="flex sm:flex-row justify-end items-center gap-3">
+                    <div class="text-sm text-gre-3">
+                      Was this information helpful?
+                    </div>
+
+                    <button
+                      class="w-10 h-10 flex justify-center items-center text-base bg-clr-2 font-normal text-center text-white select-none border-[1px] border-solid border-transparent shadow-md rounded transition-all"
+                    >
+                      <img src="./assets/imgs/car/like.png" alt="like" />
+                    </button>
+                    <button
+                      class="w-10 h-10 flex justify-center items-center text-base bg-clr-2 font-normal text-center text-white select-none border-[1px] border-solid border-transparent shadow-md rounded transition-all"
+                    >
+                      <img
+                        class="rotate-180"
+                        src="./assets/imgs/car/like.png"
+                        alt="like"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded shadow-md mb-3 bg-white">
+            <div class="text-xl font-bold mb-5">Optional extras</div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 xl:gap-6 mb-4">
+              <div class="border border-solid border-grey-5 rounded p-4">
+                <div class="flex justify-between gap-4 flex-wrap">
+                  <div>
+                    <div>Additional driver</div>
+                    <div class="text-xs">
+                      <strong> € 100.00 </strong>rental period
+                    </div>
+                  </div>
+
+                  <div
+                    class="border border-solid rounded-[50%] w-8 h-8 text-clr-2 text-2xl flex justify-center items-center"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+              <div class="border border-solid border-grey-5 rounded p-4">
+                <div class="flex justify-between gap-4 flex-wrap">
+                  <div>
+                    <div>Baby seat (0-13 kg)</div>
+                    <div class="text-xs">
+                      <strong> € 150.00 </strong>rental period
+                    </div>
+                  </div>
+
+                  <div
+                    class="border border-solid rounded-[50%] w-8 h-8 text-clr-2 text-2xl flex justify-center items-center"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+              <div class="border border-solid border-grey-5 rounded p-4">
+                <div class="flex justify-between gap-4 flex-wrap">
+                  <div>
+                    <div>Child seat (9-18 kg)</div>
+                    <div class="text-xs">
+                      <strong>€ 150.00</strong> rental period
+                    </div>
+                  </div>
+
+                  <div
+                    class="border border-solid rounded-[50%] w-8 h-8 text-clr-2 text-2xl flex justify-center items-center"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+              <div class="border border-solid border-grey-5 rounded p-4">
+                <div class="flex justify-between gap-4 flex-wrap">
+                  <div>
+                    <div>Booster seat (15-45 kg)</div>
+                    <div class="text-xs">
+                      <strong>€ 150.00</strong> rental period
+                    </div>
+                  </div>
+
+                  <div
+                    class="border border-solid rounded-[50%] w-8 h-8 text-clr-2 text-2xl flex justify-center items-center"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-grey-4 text-xs">
+              Please note that prices and availability of optional extras are
+              fully controlled by the rental supplier and that prices are
+              subject to change. Those listed here are to be used as a guide
+              only.
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded shadow-md mb-3 bg-white flex flex-col md:flex-row gap-6"
+          >
+            <div class="md:w-[270px] xl:w-[460px] flex-shrink-0">
+              <div class="text-xl font-bold mb-5">Summary</div>
+
+              <div class="bg-grey-1 p-5 rounded">
+                <div class="flex justify-between items-center py-1">
+                  <div class="text-sm">Cost of rental</div>
+                  <strong class="text-sm"> € 38.70</strong>
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <div class="text-sm">
+                    + <a href="#0" class="text-clr-2">Full Coverage</a>
+                  </div>
+                  <strong class="text-sm"> € 56.00</strong>
+                </div>
+                <div
+                  class="flex justify-between items-center py-3 my-3 border-t border-b border-solid border-grey-5"
+                >
+                  <strong class="text-sm"> Total </strong>
+                  <strong class="text-sm"> € 94.70</strong>
+                </div>
+                <div class="flex justify-between items-center py-1 mt-8">
+                  <div class="text-lg">Pay now</div>
+                  <strong class="text-lg"> € 58.70</strong>
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <div class="text-sm">Pay at pick-up</div>
+                  <strong class="text-sm"> € 36.00</strong>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow">
+              <div class="text-xl font-bold mb-5">Driver details</div>
+
+              <div class="grid lg:grid-cols-2 gap-6">
+                <div class="flex gap-1">
+                  <div class="w-20">
+                    <label class="text-grey-3 text-sm">Title:</label>
+                    <select
+                      class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                      name="gender"
+                      id="gender"
+                    >
+                      <option value="-">-</option>
+                      <option value="mr">Mr.</option>
+                      <option value="mrs">Mrs.</option>
+                      <option value="dr">Dr.</option>
+                    </select>
+                  </div>
+                  <div class="flex-grow">
+                    <label class="text-grey-3 text-sm">First name:</label>
+                    <input
+                      class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="text-grey-3 text-sm">Last name:</label>
+                  <input
+                    class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                    type="text"
+                  />
+                </div>
+                <div class="">
+                  <label class="text-grey-3 text-sm">Email:</label>
+                  <input
+                    class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <div class="flex gap-1">
+                    <div class="w-[90px]">
+                      <label class="text-grey-3 text-sm">Phone:</label>
+                      <input
+                        class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                        type="text"
+                        placeholder="+44"
+                      />
+                    </div>
+                    <div class="flex-grow">
+                      <label class="text-grey-3 text-sm">First name:</label>
+                      <input
+                        class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                        type="text"
+                        placeholder="15 1317 2610"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="grid sm:grid-cols-3 sm:gap-1">
+                    <div class="flex-grow flex-shrink-0">
+                      <label class="text-grey-3 text-sm">Date of birth:</label>
+                      <select
+                        class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                        name="day"
+                        id="day"
+                      >
+                        <option value="Day">Day</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                        <option value="">13</option>
+                        <option value="">14</option>
+                        <option value="">15</option>
+                        <option value="">16</option>
+                        <option value="">17</option>
+                        <option value="">18</option>
+                        <option value="">19</option>
+                        <option value="">20</option>
+                        <option value="">21</option>
+                        <option value="">22</option>
+                        <option value="">23</option>
+                        <option value="">24</option>
+                        <option value="">25</option>
+                        <option value="">26</option>
+                        <option value="">27</option>
+                        <option value="">28</option>
+                        <option value="">29</option>
+                        <option value="">30</option>
+                        <option value="">31</option>
+                      </select>
+                    </div>
+                    <div class="flex-grow flex-shrink-0">
+                      <label class="text-grey-3 text-sm">&nbsp;</label>
+                      <select
+                        class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                        name="month"
+                        id="month"
+                      >
+                        <option value="0">Month</option>
+                        <option value="1">Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Apr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                      </select>
+                    </div>
+                    <div class="flex-grow flex-shrink-0">
+                      <label class="text-grey-3 text-sm">&nbsp;</label>
+                      <select
+                        class="h-10 w-full border border-solid border-grey-5 rounded p-[10px] outline-none"
+                        name="year"
+                        id="year"
+                      >
+                        <option value="0">Year</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="1989">1989</option>
+                        <option value="1988">1988</option>
+                        <option value="1987">1987</option>
+                        <option value="1986">1986</option>
+                        <option value="1985">1985</option>
+                        <option value="1984">1984</option>
+                        <option value="1983">1983</option>
+                        <option value="1982">1982</option>
+                        <option value="1981">1981</option>
+                        <option value="1980">1980</option>
+                        <option value="1979">1979</option>
+                        <option value="1978">1978</option>
+                        <option value="1977">1977</option>
+                        <option value="1976">1976</option>
+                        <option value="1975">1975</option>
+                        <option value="1974">1974</option>
+                        <option value="1973">1973</option>
+                        <option value="1972">1972</option>
+                        <option value="1971">1971</option>
+                        <option value="1970">1970</option>
+                        <option value="1969">1969</option>
+                        <option value="1968">1968</option>
+                        <option value="1967">1967</option>
+                        <option value="1966">1966</option>
+                        <option value="1965">1965</option>
+                        <option value="1964">1964</option>
+                        <option value="1963">1963</option>
+                        <option value="1962">1962</option>
+                        <option value="1961">1961</option>
+                        <option value="1960">1960</option>
+                        <option value="1959">1959</option>
+                        <option value="1958">1958</option>
+                        <option value="1957">1957</option>
+                        <option value="1956">1956</option>
+                        <option value="1955">1955</option>
+                        <option value="1954">1954</option>
+                        <option value="1953">1953</option>
+                        <option value="1952">1952</option>
+                        <option value="1951">1951</option>
+                        <option value="1950">1950</option>
+                        <option value="1949">1949</option>
+                        <option value="1948">1948</option>
+                        <option value="1947">1947</option>
+                        <option value="1946">1946</option>
+                        <option value="1945">1945</option>
+                        <option value="1944">1944</option>
+                        <option value="1943">1943</option>
+                        <option value="1942">1942</option>
+                        <option value="1941">1941</option>
+                        <option value="1940">1940</option>
+                        <option value="1939">1939</option>
+                        <option value="1938">1938</option>
+                        <option value="1937">1937</option>
+                        <option value="1936">1936</option>
+                        <option value="1935">1935</option>
+                        <option value="1934">1934</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <div class="text-grey-3 text-sm mb-2">+ Add flight number</div>
+                <div class="text-grey-3 text-sm">+ Additional requirements</div>
+              </div>
+
+              <label class="ml-7 mt-5 block">
+                <input
+                  class="relative top-[1px] bg-white float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border border-solid border-[#d8d8d8] outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:top-[1px] after:left-[1px] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-clr-2 checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)]"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="inline-block pl-[0.15rem] hover:cursor-pointer text-sm"
+                >
+                  Yes, I would like to receive special offers, exclusive deals,
+                  and discounts from DiscoverCars.com.
+                </span>
+              </label>
+
+              <div class="mt-5 flex justify-end">
+                <div>
+                  <button class="button green lg sm:min-w-[300px]">
+                    Book now
+                  </button>
+                  <div class="text-xs text-center text-grey-3 mt-2">
+                    Standard confirmation
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="wrapper py-[60px] bg-clr-7">
+      <div class="contain">
+        <img
+          class="mb-10"
+          src="./assets/vectors/common/logo-dark.svg"
+          alt="logo"
+          p-4
+          rounded
+          shadow-md
+          mb-2
+          bg-white
+        />
+
+        <div class="grid gap-6 grid-cols-2 sm:grid-cols-4">
+          <div>
+            <div class="text-white font-bold mb-3">Company</div>
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >About Us</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Careers</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Blog</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Authors</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Reviews</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Awards</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Locations</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Types of Cars</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Suppliers List</a
+            >
+          </div>
+          <div>
+            <div class="text-white font-bold mb-3">Support</div>
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >My Booking</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Help center</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Our Guarentee</a
+            >
+          </div>
+          <div>
+            <div class="text-white font-bold mb-3">Partnership</div>
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Affiliate Program</a
+            >
+            <a
+              href="#0"
+              class="text-[rgba(255,255,255,.7)] hover:tex-white mb-3 block"
+              >Travel Partners</a
+            >
+          </div>
+          <div class="flex justify-end items-start">
+            <div class="flex items-center gap-4">
+              <img
+                class="w-14"
+                src="./assets/vectors/landing/worlds-best-car-rental-booking-website-2022-winner-shield-gold-1.svg"
+                alt=""
+              />
+              <img
+                class="w-14"
+                src="./assets/imgs/landing/magellan-gold-2022.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20 mb-10">
+          <div class="flex justify-between items-center flex-wrap gap-4">
+            <div class="flex flex-wrap gap-6">
+              <div class="flex gap-1">
+                <img src="./assets/vectors/common/play-store.svg" alt="" />
+                <img src="./assets/vectors/common/apple-store.svg" alt="" />
+              </div>
+              <div class="flex gap-1">
+                <div class="payments-type visa" title="Visa"></div>
+                <div class="payments-type mastercard" title="Mastercard"></div>
+                <div class="payments-type maestro" title="Maestro"></div>
+                <div class="payments-type amex" title="AMEX"></div>
+                <div class="payments-type paypal" title="Paypal"></div>
+              </div>
+              <div class="flex gap-1">
+                <img src="./assets/imgs/common/positivessl.png" alt="ssl" />
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-center">
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/fb.svg" alt="fb" />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/insta.svg" alt="insta" />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img
+                  src="./assets/vectors/common/linkedin.svg"
+                  alt="linkedin"
+                />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/yt.svg" alt="yt" />
+              </a>
+              <a class="opacity-70 transition-all hover:opacity-100" href="#0">
+                <img src="./assets/vectors/common/twitter.svg" alt="twitter" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-5">
+          <div class="text-[rgba(255,255,255,.7)]">
+            © 2011 - 2023 AS Discover Car Hire All Rights Reserved.
+          </div>
+
+          <a
+            class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
+            href="#"
+            >Cookie policy</a
+          >
+          <a
+            class="text-[rgba(255,255,255,.7)] hover:text-white transition-all"
+            href="#"
+            >Terms &amp; Conditions</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery-ui.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
