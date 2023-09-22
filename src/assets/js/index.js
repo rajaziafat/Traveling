@@ -133,4 +133,28 @@ $(function () {
     $("th.yes-protect").removeClass("bg-[#e2ffd0]");
     $("td.yes-protect").removeClass("bg-grey-1");
   });
+
+  const handleShowLocs = function(e) {
+    
+    if($(e.target).val().length > 1) {
+      $('#locs-list').removeClass("hidden")
+      $('#locs-list').addClass("block")
+    } else {
+      $('#locs-list').addClass("hidden")
+      $('#locs-list').removeClass("block")
+    }
+  }
+
+  $("#location-picker-input").click(handleShowLocs);
+  $("#location-picker-input").on('change textInput input', handleShowLocs);
+  $("#location-picker-input").on('blur', () => {
+    setTimeout(() => {
+      $('#locs-list').addClass("hidden")
+      $('#locs-list').removeClass("block")
+    }, 300)
+  });
+
+  $("#locs-list > div").click(function() {
+    $("#location-picker-input").val(($(this).attr('data-name')))
+  })
 });

@@ -120,11 +120,44 @@
             <label class="text-sm mb-2 block" for="airport"
               >Pick-up location</label
             >
-            <input
-              class="bg-white block rounded-md shadow-md py-2 px-3 pr-9 w-full placeholder:text-clr-2"
-              placeholder="Enter airport or city"
-              type="text"
-            />
+            <div class="relative location-picker">
+              <input
+              id="location-picker-input"
+                class="ouline-none bg-white block rounded-md shadow-md py-2 px-3 pr-9 w-full placeholder:text-clr-2"
+                placeholder="Enter airport or city"
+                type="text"
+              />
+              <div id="locs-list" class="hidden absolute left-0 top-[100%] w-full bg-white z-10 rounded-b max-h-[192px] overflow-auto scrollbar">
+                <div data-name="Lisbon Airport (LIS)" class="p-3 flex items-center gap-3 bg-white hover:bg-grey-1 transition-colors cursor-pointer">
+                  <img class="w-6" src="./assets/vectors/landing/plane.svg" alt="plane">                  
+                  <div>
+                    <div>Lisbon Airport (LIS)</div>
+                    <div class="text-xs">Lisbon, Portugal</div>
+                  </div>
+                </div>
+                <div data-name="Porto Airport (OPO)" class="p-3 flex items-center gap-3 bg-white hover:bg-grey-1 transition-colors cursor-pointer">
+                  <img class="w-6" src="./assets/vectors/landing/plane.svg" alt="plane">                  
+                  <div>
+                    <div>Porto Airport (OPO)</div>
+                    <div class="text-xs">Porto, Portugal</div>
+                  </div>
+                </div>
+                <div data-name="Lisbon Airport (LIS)" class="p-3 flex items-center gap-3 bg-white hover:bg-grey-1 transition-colors cursor-pointer">
+                  <img class="w-6" src="./assets/vectors/landing/plane.svg" alt="plane">                  
+                  <div>
+                    <div>Lisbon Airport (LIS)</div>
+                    <div class="text-xs">Lisbon, Portugal</div>
+                  </div>
+                </div>
+                <div data-name="Porto Airport (OPO)" class="p-3 flex items-center gap-3 bg-white hover:bg-grey-1 transition-colors cursor-pointer">
+                  <img class="w-6" src="./assets/vectors/landing/plane.svg" alt="plane">                  
+                  <div>
+                    <div>Porto Airport (OPO)</div>
+                    <div class="text-xs">Porto, Portugal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="my-4">
@@ -149,7 +182,7 @@
               >Drop-off location</label
             >
             <input
-              class="bg-white block rounded-md shadow-md py-2 px-3 pr-9 w-full placeholder:text-clr-2"
+              class="bg-white block rounded-md shadow-md py-2 px-3 pr-9 w-full placeholder:text-clr-2 outline-none"
               placeholder="Enter airport or city"
               type="text"
             />
@@ -230,7 +263,7 @@
                 class="bg-white rounded-md shadow-md overflow-hidden flex justify-between px-2"
               >
                 <input
-                  class="block py-2 px-3 h-10"
+                  class="outline-none block py-2 px-3 h-10"
                   type="text"
                   name="pickDate"
                   id="pick-date-ui-2"
