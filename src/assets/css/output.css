@@ -434,6 +434,10 @@ video {
   display: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
@@ -609,6 +613,10 @@ p {
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .-right-\[320px\] {
@@ -1022,12 +1030,16 @@ p {
   width: 90px;
 }
 
+.w-\[calc\(100vw-40px-40px-88px\)\] {
+  width: calc(100vw - 40px - 40px - 88px);
+}
+
 .w-full {
   width: 100%;
 }
 
-.w-\[calc\(100vw-40px-40px-88px\)\] {
-  width: calc(100vw - 40px - 40px - 88px);
+.w-screen {
+  width: 100vw;
 }
 
 .min-w-0 {
@@ -2281,19 +2293,21 @@ a.ui-button:active {
   /* background-size: 22px 176px; */
 }
 
-.ui-datepicker.ui-datepicker-multi {
-  width: 720px !important;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
-}
+@media screen and (min-width: 1535px) {
+  .ui-datepicker.ui-datepicker-multi {
+    width: 720px !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  }
 
-.ui-datepicker.ui-datepicker-multi:after {
-  position: absolute;
-  left: 0;
-  height: 2px;
-  display: block;
-  width: 100%;
-  background-color: #00a1ff;
-  content: "";
+  .ui-datepicker.ui-datepicker-multi:after {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    display: block;
+    width: 100%;
+    background-color: #00a1ff;
+    content: "";
+  }
 }
 
 .ui-datepicker.ui-datepicker-multi.ui-below {
@@ -2775,6 +2789,14 @@ a.ui-button:active {
 
   .md\:mb-5 {
     margin-bottom: 1.25rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:hidden {
