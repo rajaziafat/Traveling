@@ -78,10 +78,6 @@
     @apply py-[14px] relative pl-[30px] text-clr-1 before:absolute before:top-[calc(50%-4px)] before:-translate-y-1/2 before:left-0 before:inline-block before:w-3 before:h-3 before:content-dropdownIcon cursor-pointer;
   }
 
-  .ui-datepicker {
-    @apply z-[51];
-  }
-
   .scrollbar::-webkit-scrollbar {
     width: 4px;
   }
@@ -99,7 +95,7 @@
   #ui-datepicker-div {
     /* display: flex !important; */
     flex-direction: column;
-    width: 265px !important;
+    width: 350px !important;
   }
 
   .ui-datepicker-row-break,
@@ -545,6 +541,12 @@ a.ui-button:active {
   background: #f1f3f4;
   content: "";
   display: block;
+}
+
+@media screen and (max-width: 1535px) {
+  .ui-datepicker-group-first:after {
+    background: transparent !important;
+  }
 }
 
 .ui-datepicker-group-first .ui-datepicker-year {

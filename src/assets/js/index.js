@@ -1,5 +1,5 @@
 $(function () {
-  $("#pick-date-ui").datepicker({
+  $("#pick-date-ui-1").datepicker({
     numberOfMonths: 2,
     showButtonPanel: true,
   });

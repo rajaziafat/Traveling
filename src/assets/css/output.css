@@ -1883,10 +1883,6 @@ input {
   content: var(--tw-content);
 }
 
-.ui-datepicker {
-  z-index: 51;
-}
-
 .scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -1903,7 +1899,7 @@ input {
   #ui-datepicker-div {
     /* display: flex !important; */
     flex-direction: column;
-    width: 265px !important;
+    width: 350px !important;
   }
 
   .ui-datepicker-row-break,
@@ -2349,6 +2345,12 @@ a.ui-button:active {
   display: block;
 }
 
+@media screen and (max-width: 1535px) {
+  .ui-datepicker-group-first:after {
+    background: transparent !important;
+  }
+}
+
 .ui-datepicker-group-first .ui-datepicker-year {
   display: none;
 }
@@ -2789,10 +2791,6 @@ a.ui-button:active {
 
   .md\:mb-5 {
     margin-bottom: 1.25rem;
-  }
-
-  .md\:block {
-    display: block;
   }
 
   .md\:flex {
